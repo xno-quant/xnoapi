@@ -1,0 +1,508 @@
+Metadata-Version: 2.4
+Name: xnoapi
+Version: 0.1.16
+Summary: XNO API Library for Financial Data
+Author: xno_project
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# XNO API Library
+
+⚠️ **Ghi chú**: Tài liệu này bắt đầu bằng **Tiếng Việt** cho cộng đồng địa phương. 🌐 **Phiên bản Tiếng Anh** có sẵn bên dưới — cuộn xuống hoặc sử dụng mục lục để điều hướng.
+
+Chào mừng bạn đến với **XNO API**, thư viện Python toàn diện cho phân tích định lượng và truy xuất dữ liệu tài chính, được tối ưu hóa đặc biệt cho **thị trường tài chính Việt Nam**.
+
+Với sứ mệnh **"Đưa công cụ phân tích định lượng đến gần hơn với mọi nhà đầu tư Việt Nam"**, XNO API liên tục phát triển, tích hợp những công nghệ hiện đại để không chỉ đáp ứng nhu cầu cơ bản về dữ liệu, mà còn giúp bạn xây dựng các chiến lược giao dịch thông minh và hiệu quả.
+
+- **🆓 Hoàn toàn miễn phí & mã nguồn mở**: Dễ dàng truy cập và sử dụng, phù hợp với nhà đầu tư cá nhân, nhà phân tích định lượng, và cộng đồng nghiên cứu.
+- **🐍 Giải pháp Python toàn diện**: Các hàm chức năng thân thiện, dễ dàng tích hợp để xây dựng các hệ thống giao dịch tự động.
+- **📊 Dữ liệu Việt Nam chuyên sâu**: Bao gồm cổ phiếu, chỉ số, phái sinh với cấu trúc phí giao dịch chuẩn Việt Nam.
+- **📈 Công cụ phân tích mạnh mẽ**: Tích hợp sẵn các chỉ số hiệu suất, backtesting, và đánh giá rủi ro.
+
+**Bạn chính là một phần quan trọng trong hành trình chuyển đổi số thị trường tài chính Việt Nam. Hãy cùng XNO tạo nên những thay đổi tích cực và hiệu quả!**
+
+**Tham gia ngay cộng đồng XNO để giao lưu, chia sẻ kinh nghiệm và cập nhật những tính năng mới nhất:**
+
+🌐 **Website chính thức**: [xno.vn](https://xno.vn)  
+👥 **Cộng đồng Quant Finance**: [xnoquant.vn](https://xnoquant.vn)
+
+---
+
+## 🚀 Tại sao chọn XNO API?
+
+**XNO API** giúp rút ngắn thời gian xử lý dữ liệu, hỗ trợ học tập, nghiên cứu và xây dựng hệ thống phân tích giao dịch định lượng một cách hiệu quả – không chỉ là một công cụ trích xuất dữ liệu, mà là nền tảng để phát triển giải pháp đầu tư thông minh cá nhân. Thư viện được thiết kế dễ dàng sử dụng và tích hợp vào các hệ thống phân tích, nghiên cứu, hoặc bot giao dịch.
+
+### 🔎 **Truy xuất dữ liệu dễ dàng**
+
+Dễ dàng truy cập dữ liệu thông qua các hàm Python thân thiện, giúp tích hợp nhanh vào hệ thống phân tích tự động hoặc bot giao dịch.
+
+### 📊 **Dữ liệu thị trường Việt Nam**
+
+Giá cổ phiếu thời gian thực, dữ liệu lịch sử, chỉ số thị trường và dữ liệu phái sinh với độ chính xác cao.
+
+### 📈 **Công cụ phân tích hiệu suất**
+
+Tích hợp sẵn các chỉ số Sharpe, Sortino, Max Drawdown, Win Rate và nhiều metrics quan trọng khác.
+
+### 🧪 **Backtesting chuyên nghiệp**
+
+Hỗ trợ backtest chiến lược với cấu trúc phí giao dịch chuẩn thị trường Việt Nam, tính toán PnL chính xác.
+
+### 🖼️ **Tích hợp visualization**
+
+Dễ dàng mở rộng để tạo các biểu đồ và báo cáo trực quan cho chiến lược giao dịch.
+
+---
+
+## 📦 Cài đặt
+
+Bạn có thể cài đặt thư viện bản phát hành ổn định qua PyPI với câu lệnh sau:
+
+```bash
+pip install xnoapi
+```
+
+Hoặc cài đặt từ mã nguồn GitHub:
+
+```bash
+git clone https://github.com/xnoproject/xnoapi.git
+pip install ./xnoapi
+```
+
+### Bắt đầu sử dụng
+
+Bạn cần nạp thư viện vào môi trường Python thông qua giao diện Jupyter Notebook hoặc Terminal:
+
+```python
+from xnoapi import client
+from xnoapi.vn.data import stocks, derivatives
+from xnoapi.vn.metrics import Metrics, Backtest_Derivates
+
+# Khởi tạo client với API key
+client(apikey="your_api_key")
+```
+
+---
+
+## 📚 Tài liệu hướng dẫn
+
+- **📖 Tài liệu trực tuyến**: [https://xnoapi.readthedocs.io](https://xnoapi.readthedocs.io/en/latest/)
+- **📄 Phiên bản PDF**: [Tải xuống](https://buildmedia.readthedocs.org/media/pdf/xnoapi/latest/xnoapi.pdf)
+- **🎯 Hướng dẫn chi tiết**: [xno.vn/docs](https://xno.vn)
+- **💬 Hỗ trợ cộng đồng**: [xnoquant.vn](https://xnoquant.vn)
+
+![Documentation Status](https://readthedocs.org/projects/xnoapi/badge/?version=latest)
+
+---
+
+## 🎯 Ví dụ sử dụng cơ bản
+
+### Truy xuất dữ liệu cổ phiếu và phái sinh Việt Nam
+
+```python
+from xnoapi import client
+from xnoapi.vn.data import stocks, derivatives
+
+# Khởi tạo client
+client(apikey="your_api_key")
+
+# Danh sách cổ phiếu có tính thanh khoản cao
+liquid_stocks = stocks.list_liquid_asset()
+print("Cổ phiếu thanh khoản cao:", liquid_stocks)
+
+# Dữ liệu lịch sử cổ phiếu VIC (Vingroup)
+vic_data = stocks.get_hist("VIC")
+print("Dữ liệu VIC:")
+print(vic_data.head())
+
+# Dữ liệu phái sinh VN30F1M theo khung thời gian 1 phút
+vn30f1m_data = derivatives.get_hist("VN30F1M", "1m")
+print("Dữ liệu VN30F1M:")
+print(vn30f1m_data.head())
+```
+
+---
+
+## 🧠 Cấu trúc thư viện
+
+### 📊 **Dữ liệu tài chính**
+
+#### `xnoapi.vn.data.stocks`
+
+- `list_liquid_asset()`: Danh sách cổ phiếu có tính thanh khoản cao trên thị trường Việt Nam
+- `get_hist(asset)`: Dữ liệu OHLCV lịch sử của cổ phiếu
+
+#### `xnoapi.vn.data.derivatives`
+
+- `get_hist(asset, frequency)`: Dữ liệu thị trường phái sinh (ví dụ: VN30F1M)
+
+### 📈 **Phân tích & đánh giá hiệu suất**
+
+#### `xnoapi.vn.metrics.Metrics`
+
+Bao gồm các chỉ số quan trọng:
+
+- **Sharpe Ratio**: Đánh giá hiệu suất điều chỉnh theo rủi ro
+- **Sortino Ratio**: Tập trung vào downside risk
+- **Max Drawdown**: Mức thua lỗ tối đa
+- **Average Gain/Loss**: Lãi/lỗ trung bình
+- **Hit Ratio**: Tỷ lệ giao dịch thành công
+
+#### `xnoapi.vn.metrics.Backtest_Derivates`
+
+- Logic backtesting cho chiến lược giao dịch
+- Hỗ trợ mô hình phí giao dịch chuẩn Việt Nam
+- Tính toán PnL chính xác
+
+#### `xnoapi.metrics.single_asset.TradingBacktest`
+
+- Lớp backtesting nhẹ cho chiến lược giao dịch phái sinh
+- Hỗ trợ tính toán PnL thô và sau phí
+- Các metrics: Sharpe, Sortino, Calmar, Max Drawdown, Win Rate, Profit Factor, Risk of Ruin, v.v.
+
+---
+
+## 🧪 Ví dụ thực hành
+
+### Đánh giá chiến lược giao dịch với Metrics
+
+```python
+from xnoapi.vn.metrics import Metrics, Backtest_Derivates
+from xnoapi.vn.data import derivatives
+import numpy as np
+
+# Tạo tín hiệu giao dịch: chiến lược đơn giản dựa trên median 20 chu kỳ
+def gen_position(df):
+    """
+    Tạo tín hiệu giao dịch dựa trên so sánh giá đóng cửa với median 20 chu kỳ
+    """
+    return df.assign(
+        position=np.sign(df["Close"] - df["Close"].rolling(20).median())
+    )
+
+# Lấy dữ liệu lịch sử 1 phút
+print("📥 Đang tải dữ liệu VN30F1M...")
+df = derivatives.get_hist("VN30F1M", "1m")
+df_pos = gen_position(df)
+
+# Thực hiện backtest chiến lược
+print("🔄 Đang thực hiện backtest...")
+backtest = Backtest_Derivates(df_pos, pnl_type="raw")
+
+# Khởi tạo metrics
+metrics = Metrics(backtest)
+
+# ===== Phương thức Backtest_Derivates =====
+print("\n📊 KẾT QUẢ BACKTEST:")
+print("=" * 50)
+
+# PnL tích lũy
+cumulative_pnl = backtest.PNL()
+print(f"💰 PnL tích lũy cuối cùng: {cumulative_pnl.iloc[-1]:,.0f} VND")
+
+# PnL tích lũy theo ngày
+daily_pnl = backtest.daily_PNL()
+print(f"📈 Số ngày giao dịch: {len(daily_pnl)} ngày")
+
+# Ước tính vốn tối thiểu cần thiết
+min_capital = backtest.estimate_minimum_capital()
+print(f"💳 Vốn tối thiểu cần thiết: {min_capital:,.0f} VND")
+
+# PnL theo phần trăm
+pnl_percentage = backtest.PNL_percentage()
+print(f"📊 Tổng lợi nhuận: {pnl_percentage.iloc[-1]:.2f}%")
+
+# ===== Phương thức Metrics =====
+print("\n📈 CHỈ SỐ HIỆU SUẤT:")
+print("=" * 50)
+
+# Các chỉ số cơ bản
+print(f"🎯 Tỷ lệ thắng: {metrics.win_rate():.2f}%")
+print(f"📊 Lãi trung bình: {metrics.avg_win():,.0f} VND")
+print(f"📉 Lỗ trung bình: {metrics.avg_loss():,.0f} VND")
+print(f"📈 Lợi nhuận trung bình: {metrics.avg_return():.4f}")
+
+# Chỉ số rủi ro
+print(f"\n⚠️  CHỈ SỐ RỦI RO:")
+print("=" * 30)
+print(f"📉 Max Drawdown: {metrics.max_drawdown():.2f}%")
+print(f"📊 Độ biến động: {metrics.volatility():.4f}")
+print(f"🎲 Value at Risk (95%): {metrics.value_at_risk():.4f}")
+print(f"☠️  Risk of Ruin: {metrics.risk_of_ruin():.2f}%")
+
+# Chỉ số hiệu suất điều chỉnh rủi ro
+print(f"\n🏆 CHỈ SỐ HIỆU SUẤT:")
+print("=" * 35)
+print(f"⚡ Sharpe Ratio: {metrics.sharpe():.3f}")
+print(f"🎯 Sortino Ratio: {metrics.sortino():.3f}")
+print(f"📈 Calmar Ratio: {metrics.calmar():.3f}")
+print(f"💰 Profit Factor: {metrics.profit_factor():.3f}")
+
+print("\n✅ Hoàn thành phân tích chiến lược!")
+```
+
+### Ví dụ output:
+
+```
+📥 Đang tải dữ liệu VN30F1M...
+🔄 Đang thực hiện backtest...
+
+📊 KẾT QUẢ BACKTEST:
+==================================================
+💰 PnL tích lũy cuối cùng: 15,420,000 VND
+📈 Số ngày giao dịch: 45 ngày
+💳 Vốn tối thiểu cần thiết: 850,000,000 VND
+📊 Tổng lợi nhuận: 1.81%
+
+📈 CHỈ SỐ HIỆU SUẤT:
+==================================================
+🎯 Tỷ lệ thắng: 52.30%
+📊 Lãi trung bình: 2,150,000 VND
+📉 Lỗ trung bình: -1,980,000 VND
+📈 Lợi nhuận trung bình: 0.0024
+
+⚠️  CHỈ SỐ RỦI RO:
+==============================
+📉 Max Drawdown: -8.45%
+📊 Độ biến động: 0.0892
+🎲 Value at Risk (95%): -0.0156
+☠️  Risk of Ruin: 2.34%
+
+🏆 CHỈ SỐ HIỆU SUẤT:
+===================================
+⚡ Sharpe Ratio: 0.847
+🎯 Sortino Ratio: 1.203
+📈 Calmar Ratio: 0.214
+💰 Profit Factor: 1.086
+
+✅ Hoàn thành phân tích chiến lược!
+```
+
+---
+
+## 🌟 Cộng đồng & Hỗ trợ
+
+**XNO phát triển nhờ sự chung tay của cộng đồng những người yêu thích công nghệ và tài chính định lượng.** Mỗi dòng code, mỗi bản sửa lỗi đều là minh chứng cho sự đóng góp quý giá của các bạn. Cảm ơn vì đã biến XNO API thành công cụ mạnh mẽ cho cộng đồng quant Việt Nam!
+
+### 💬 Tham gia cộng đồng
+
+- **🌐 Website chính thức**: [xno.vn](https://xno.vn) - Tin tức, blog, và tài nguyên
+- **👥 Cộng đồng Quant**: [xnoquant.vn](https://xnoquant.vn) - Thảo luận, chia sẻ chiến lược
+- **📧 Hỗ trợ**: support@xno.vn
+- **🐛 Báo lỗi**: [GitHub Issues](https://github.com/xnoproject/xnoapi/issues)
+
+### 🤝 Đóng góp
+
+Chúng tôi hoan nghênh mọi đóng góp từ cộng đồng! Bạn có thể:
+
+- 🌟 **Star** dự án trên GitHub
+- 🐛 Báo cáo lỗi hoặc đề xuất tính năng
+- 📖 Cải thiện tài liệu
+- 💻 Đóng góp code
+
+---
+
+## ⚠️ Tuyên bố miễn trách nhiệm
+
+**XNO API** được phát triển nhằm phục vụ mục đích nghiên cứu và sử dụng cá nhân. Dữ liệu cung cấp có thể không đầy đủ, không liên tục hoặc sai lệch so với thực tế, do đó không khuyến nghị sử dụng cho mục đích giao dịch thực tế, thuật toán đầu tư, hoặc ra quyết định tài chính khi bạn không hiểu rõ.
+
+Các tác giả không chịu trách nhiệm đối với bất kỳ tổn thất hay thiệt hại nào phát sinh từ việc sử dụng dữ liệu hoặc mã nguồn này, bao gồm nhưng không giới hạn: sai lệch dữ liệu, mất mát tài chính, hoặc sử dụng sai mục đích.
+
+**XNO API không cung cấp tư vấn đầu tư hay tín hiệu giao dịch. Người dùng hoàn toàn tự chịu trách nhiệm khi sử dụng thư viện.**
+
+---
+
+## 📄 Giấy phép
+
+**XNO API** được phát hành theo [Giấy phép MIT](https://choosealicense.com/licenses/mit/). Xem chi tiết tại [LICENSE](https://github.com/xnoproject/xnoapi/blob/main/LICENSE).
+
+Khi sử dụng XNO API trong dự án của mình, bạn cần trích dẫn thông tin về tác giả và dự án theo hướng dẫn.
+
+---
+
+## 🙏 Lời cảm ơn
+
+Được duy trì bởi **XNO Team** và cộng đồng quant finance Việt Nam.  
+Đặc biệt cảm ơn các contributor và nhà cung cấp dữ liệu tài chính đã hỗ trợ cộng đồng retail quant Việt Nam.
+
+**Trước khi bắt đầu, hãy đánh dấu yêu thích ⭐ để giúp dự án có thể tiếp cận tới nhiều người hơn. Cảm ơn bạn!**
+
+---
+
+# XNO API Library (English)
+
+Welcome to **XNO API**, a comprehensive Python library for quantitative analysis and financial data retrieval, specifically optimized for the **Vietnamese financial market**.
+
+Driven by the mission **"To bring quantitative analysis tools closer to every Vietnamese investor"**, XNO API continuously evolves by integrating modern technologies to not only meet basic data needs but also help you build intelligent and effective trading strategies.
+
+- **🆓 Free & Open-Source**: Accessible for all—individual investors, quantitative analysts, and research communities
+- **🐍 Comprehensive Python Solution**: User-friendly functions, easily integrated for building automated trading systems
+- **📊 Vietnam-specific Data**: Stocks, indices, derivatives with Vietnam-standard fee structures
+- **📈 Powerful Analytics**: Built-in performance metrics, backtesting, and risk assessment tools
+
+**You are an important part of the digital transformation of Vietnam's financial market. Let's create positive and effective changes together with XNO!**
+
+**Join the XNO community to share knowledge, collaborate, and stay updated:**
+
+🌐 **Official Website**: [xno.vn](https://xno.vn)  
+👥 **Quant Finance Community**: [xnoquant.vn](https://xnoquant.vn)
+
+---
+
+## 📌 Key Features
+
+- 🔎 **Simple interface** to retrieve real-time and historical data for Vietnamese stocks and derivatives
+- 📈 **Built-in performance metrics**: Sharpe, Sortino, Max Drawdown, and more
+- 📊 **Optimized PnL backtesting tools** for derivatives with Vietnam-specific fee structures
+- 🧪 **Compatible** with pandas, NumPy for custom strategies and analysis
+- 🖼️ **Easily extensible** for visual output of strategies and metrics
+
+---
+
+## 📦 Installation
+
+Install via pip:
+
+```bash
+pip install xnoapi
+```
+
+Or clone from source:
+
+```bash
+git clone https://github.com/xnoproject/xnoapi.git
+pip install ./xnoapi
+```
+
+After installation:
+
+```python
+from xnoapi import client
+from xnoapi.vn.data import stocks, derivatives
+from xnoapi.vn.metrics import Metrics, Backtest_Derivates
+
+client(apikey="your_api_key")
+```
+
+---
+
+## 📚 Documentation
+
+- **📖 Online Docs**: [https://xnoapi.readthedocs.io](https://xnoapi.readthedocs.io/en/latest/)
+- **📄 PDF Version**: [Download](https://buildmedia.readthedocs.org/media/pdf/xnoapi/latest/xnoapi.pdf)
+- **🎯 Detailed Guide**: [xno.vn/docs](https://xno.vn)
+- **💬 Community Support**: [xnoquant.vn](https://xnoquant.vn)
+
+![Documentation Status](https://readthedocs.org/projects/xnoapi/badge/?version=latest)
+
+---
+
+## 🚀 Usage Example
+
+Retrieve and analyze Vietnamese stock & derivative data:
+
+```python
+from xnoapi import client
+from xnoapi.vn.data import stocks, derivatives
+
+client(apikey="your_api_key")
+
+# List of liquid stocks
+stocks.list_liquid_asset()
+
+# Historical data for VIC (Vingroup)
+vic = stocks.get_hist("VIC")
+
+# Historical data for VN30F1M derivative
+vn30f1m = derivatives.get_hist("VN30F1M", "1m")
+```
+
+---
+
+## 🧠 Available Modules
+
+### 📊 Financial Data
+
+- **`xnoapi.vn.data.stocks`**
+
+  - `list_liquid_asset()`: List of high-liquidity Vietnamese stocks
+  - `get_hist(asset)`: Historical OHLCV data
+
+- **`xnoapi.vn.data.derivatives`**
+  - `get_hist(asset, frequency)`: Derivative market data (e.g., VN30F1M)
+
+### 📈 Metrics & Analytics
+
+- **`xnoapi.vn.metrics.Metrics`**: Includes Sharpe Ratio, Sortino Ratio, Max Drawdown, Avg Gain/Loss, Hit Ratio...
+- **`xnoapi.vn.metrics.Backtest_Derivates`**: Backtesting logic for trading strategies with support for fee modeling
+- **`xnoapi.metrics.single_asset.TradingBacktest`**: Lightweight backtesting class with raw and after-fee PnL calculation
+
+---
+
+## 🧪 Examples
+
+### Strategy Evaluation with Metrics
+
+```python
+from xnoapi.vn.metrics import Metrics, Backtest_Derivates
+from xnoapi.vn.data import derivatives
+import numpy as np
+
+# Generate signal: simple strategy based on 20-period median
+def gen_position(df):
+    return df.assign(
+        position=np.sign(df["Close"] - df["Close"].rolling(20).median())
+    )
+
+# Fetch 1-minute historical data
+df = derivatives.get_hist("VN30F1M", "1m")
+df_pos = gen_position(df)
+
+# Backtest the strategy
+backtest = Backtest_Derivates(df_pos, pnl_type="raw")
+metrics = Metrics(backtest)
+
+# Get various metrics
+print(f"Sharpe Ratio: {metrics.sharpe():.3f}")
+print(f"Max Drawdown: {metrics.max_drawdown():.2f}%")
+print(f"Win Rate: {metrics.win_rate():.2f}%")
+```
+
+---
+
+## 🌟 Community & Support
+
+- **🌐 Official Website**: [xno.vn](https://xno.vn)
+- **👥 Quant Community**: [xnoquant.vn](https://xnoquant.vn)
+- **📧 Support**: support@xno.vn
+- **🐛 Issues**: [GitHub Issues](https://github.com/xnoproject/xnoapi/issues)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).  
+See [LICENSE](https://github.com/xnoproject/xnoapi/blob/main/LICENSE) for full details.
+
+---
+
+**⭐ Don't forget to star this project to help us reach more people. Thank you!**

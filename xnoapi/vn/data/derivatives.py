@@ -4,7 +4,7 @@ import base64
 import requests
 import pandas as pd
 
-from xnoapi.vn.data.utils import Config
+from .utils import Config
 
 # Định nghĩa các thành phần public của module
 __all__ = ["get_hist"]
