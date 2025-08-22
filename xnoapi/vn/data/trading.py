@@ -1,6 +1,7 @@
 import pandas as pd
-from .core import send_request
+
 from .const import GRAPHQL_URL, PRICE_INFO_MAP
+from .core import send_request
 from .quote_market import Quote
 
 _PRICEBOARD_QUERY = """
@@ -13,6 +14,7 @@ query PriceBoard($tickers:[String!]){
   }
 }
 """
+
 
 class Trading:
     @staticmethod
@@ -37,31 +39,50 @@ class Trading:
                 else:
                     ref = None
 
-                change = (price - ref) if (price is not None and ref is not None) else None
-                pct = (change / ref * 100.0) if (change is not None and ref not in (None, 0)) else None
+                change = (
+                    (price - ref) if (price is not None and ref is not None) else None
+                )
+                pct = (
+                    (change / ref * 100.0)
+                    if (change is not None and ref not in (None, 0))
+                    else None
+                )
 
-                rows.append({
-                    "symbol": sym,
-                    "open": None,
-                    "ceiling": None,
-                    "floor": None,
-                    "ref_price": ref,
-                    "high": None,
-                    "low": None,
-                    "price_change": change,
-                    "price_change_pct": pct,
-                    "foreign_volume": None,
-                    "foreign_room": None,
-                    "foreign_holding_room": None,
-                    "avg_match_volume_2w": None,
-                })
+                rows.append(
+                    {
+                        "symbol": sym,
+                        "open": None,
+                        "ceiling": None,
+                        "floor": None,
+                        "ref_price": ref,
+                        "high": None,
+                        "low": None,
+                        "price_change": change,
+                        "price_change_pct": pct,
+                        "foreign_volume": None,
+                        "foreign_room": None,
+                        "foreign_holding_room": None,
+                        "avg_match_volume_2w": None,
+                    }
+                )
             except Exception:
-                rows.append({
-                    "symbol": sym, "open": None, "ceiling": None, "floor": None, "ref_price": None,
-                    "high": None, "low": None, "price_change": None, "price_change_pct": None,
-                    "foreign_volume": None, "foreign_room": None, "foreign_holding_room": None,
-                    "avg_match_volume_2w": None,
-                })
+                rows.append(
+                    {
+                        "symbol": sym,
+                        "open": None,
+                        "ceiling": None,
+                        "floor": None,
+                        "ref_price": None,
+                        "high": None,
+                        "low": None,
+                        "price_change": None,
+                        "price_change_pct": None,
+                        "foreign_volume": None,
+                        "foreign_room": None,
+                        "foreign_holding_room": None,
+                        "avg_match_volume_2w": None,
+                    }
+                )
         return pd.DataFrame(rows)
 
     @staticmethod
@@ -77,7 +98,7 @@ class Trading:
                 GRAPHQL_URL,
                 method="POST",
                 headers={"Content-Type": "application/json"},
-                payload=payload
+                payload=payload,
             )
             rows = (data or {}).get("data", {}).get("priceBoard", [])
             if rows:
