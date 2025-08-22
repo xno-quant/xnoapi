@@ -24,6 +24,8 @@ xnoapi/vn/data/finance.py
 xnoapi/vn/data/fund.py
 xnoapi/vn/data/listing.py
 xnoapi/vn/data/quant_data.py
+xnoapi/vn/data/quote_global.py
+xnoapi/vn/data/quote_market.py
 xnoapi/vn/data/quote_msn.py
 xnoapi/vn/data/quote_vci.py
 xnoapi/vn/data/stocks.py
