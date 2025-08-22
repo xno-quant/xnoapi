@@ -49,8 +49,6 @@ Hỗ trợ backtest chiến lược với cấu trúc phí giao dịch chuẩn t
 
 ### 🖼️ Tích hợp visualization
 
-### 🖼️ Tích hợp visualization
-
 Dễ dàng mở rộng để tạo các biểu đồ và báo cáo trực quan cho chiến lược giao dịch.
 
 ## 📦 Cài đặt
@@ -133,9 +131,6 @@ print(vn30f1m_data.head())
   ```
 
 #### `xnoapi.vn.data.derivatives`
-
-- `get_hist(asset, frequency)`: Dữ liệu thị trường phái sinh (VN30F1M, VN30F2M)
-- Hỗ trợ các frequency: "1m", "5m", "15m", "30m", "1H", "1D"
 
 - `get_hist(asset, frequency)`: Dữ liệu thị trường phái sinh (VN30F1M, VN30F2M)
 
@@ -334,11 +329,6 @@ Bao gồm các chỉ số quan trọng:
 - **Risk of Ruin**: Xác suất phá sản
 
 #### `xnoapi.vn.metrics.Backtest_Derivates`
-
-- Logic backtesting cho chiến lược giao dịch phái sinh
-- Hỗ trợ mô hình phí giao dịch chuẩn Việt Nam (transaction fee + overnight fee)
-- Tính toán PnL thô và sau phí
-- Ước tính vốn tối thiểu cần thiết
 
 - Logic backtesting cho chiến lược giao dịch phái sinh
 - Hỗ trợ mô hình phí giao dịch chuẩn Việt Nam (transaction fee + overnight fee)
@@ -547,12 +537,6 @@ if not ratios.empty:
 
 ### 📊 Quant Data API v2
 
-<<<<<<< HEAD
-
-=======
-
-> > > > > > > a110dc2078b536bef542ebd0749a897b6f02f8b1
-
 - Dữ liệu OHLCV với timestamp chính xác đến giây
 - Order book snapshot realtime
 - Foreign trading data
@@ -560,35 +544,17 @@ if not ratios.empty:
 
 ### 🏦 Quỹ mở & Tài sản quốc tế
 
-<<<<<<< HEAD
-
-=======
-
-> > > > > > > a110dc2078b536bef542ebd0749a897b6f02f8b1
-
 - Thông tin quỹ mở đầy đủ (cổ phiếu, trái phiếu, cân bằng)
 - Danh mục đầu tư và phân bổ tài sản của quỹ
 - Dữ liệu forex, cryptocurrency, chỉ số quốc tế
 
 ### 🎯 Take Profit/Stop Loss nâng cao
 
-<<<<<<< HEAD
-
-=======
-
-> > > > > > > a110dc2078b536bef542ebd0749a897b6f02f8b1
-
 - Fixed TP/SL với hold mechanism
 - Trailing Stop Loss động
 - Backtesting với risk management tự động
 
 ### 📈 Metrics mở rộng
-
-<<<<<<< HEAD
-
-=======
-
-> > > > > > > a110dc2078b536bef542ebd0749a897b6f02f8b1
 
 - Risk of Ruin calculation
 - Value at Risk (VaR)
