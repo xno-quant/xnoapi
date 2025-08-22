@@ -1,6 +1,6 @@
 import pandas as pd
 import requests
-from xnoapi.vn.data.utils import Config
+from .utils import Config
 
 # Define the public API of the module
 __all__ = ["list_liquid_asset", "get_hist"]
