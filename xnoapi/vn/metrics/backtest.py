@@ -117,3 +117,14 @@ class Backtest_Derivates:
         if min_capital == 0:
             return np.nan  # Avoid division by zero
         return self.daily_PNL() / min_capital
+
+    def avg_pos(self):
+        """
+        Calculate average daily pos enter
+
+        Returns
+        -------
+        float
+            Average pos enter per day
+        """
+        return abs(self.df["position"]).mean()
