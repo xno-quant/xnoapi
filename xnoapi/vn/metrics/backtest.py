@@ -127,4 +127,4 @@ class Backtest_Derivates:
         float
             Average pos enter per day
         """
-        return abs(self.df["position"]).mean()
+        return abs(self.df['position'].diff().dropna()).sum()/len(self.daily_PNL())
