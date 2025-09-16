@@ -140,6 +140,37 @@ print("Dữ liệu VN30F1M:")
 print(vn30f1m_data.head())
 ```
 
+```output
+Cổ phiếu thanh khoản cao:        0             1
+0    SHS  3.885972e+10
+1    CEO  3.227357e+10
+2    PVS  1.849527e+10
+3    MBS  1.431323e+10
+4    IDC  7.032716e+09
+..   ...           ...
+145  ITQ  7.207067e+07
+146  ANT  7.107417e+07
+147  PFL  6.960543e+07
+148  KCB  6.549169e+07
+149  VHE  6.431393e+07
+
+[150 rows x 2 columns]
+Dữ liệu VIC:
+         Date      time  Open  High   Low  Close    volume
+0  2022-08-23  09:00:00  65.5  65.6  65.0   65.2  300000.0
+1  2022-08-23  10:00:00  65.2  65.2  65.0   65.0  216000.0
+2  2022-08-23  11:00:00  65.0  65.2  65.0   65.0  164700.0
+3  2022-08-23  13:00:00  65.0  65.1  64.8   64.8  328600.0
+4  2022-08-23  14:00:00  64.9  65.2  64.8   65.0  428500.0
+Dữ liệu VN30F1M:
+         Date      time   Open   High    Low  Close  volume
+0  2018-08-13  09:01:00  943.0  943.1  942.9  943.1   220.0
+1  2018-08-13  09:02:00  943.0  943.6  943.0  943.5   121.0
+2  2018-08-13  09:03:00  943.3  943.4  943.3  943.4   135.0
+3  2018-08-13  09:04:00  943.2  943.2  943.0  943.1   361.0
+4  2018-08-13  09:05:00  943.1  943.1  942.9  943.0   343.0
+```
+
 ## 🧠 Cấu trúc thư viện
 
 ### 📊 Dữ liệu tài chính
@@ -396,6 +427,55 @@ foreign_data = get_stock_foreign_trading("VIC")
 print("Foreign trading VIC:", foreign_data)
 ```
 
+```output
+✅ Kết nối thành công!
+Các chỉ số có sẵn:            symbol           name
+0             HNX            HNX
+1           HNX30          HNX30
+2           HNX30          HNX30
+3        HNXIndex       HNXINDEX
+4   HNXUpcomIndex  HNXUPCOMINDEX
+5           UPCOM          UPCOM
+6           VN100          VN100
+7            VN30           VN30
+8            VN30           VN30
+9      VNALLSHARE     VNALLSHARE
+10         VNCOND         VNCOND
+11         VNCONS         VNCONS
+12      VNDIAMOND      VNDIAMOND
+13          VNENE          VNENE
+14          VNFIN          VNFIN
+15      VNFINLEAD      VNFINLEAD
+16    VNFINSELECT    VNFINSELECT
+17         VNHEAL         VNHEAL
+18          VNIND          VNIND
+19        VNINDEX        VNINDEX
+20        VNINDEX        VNINDEX
+21           VNIT           VNIT
+22          VNMAT          VNMAT
+23       VNMIDCAP       VNMIDCAP
+24         VNREAL         VNREAL
+25           VNSI           VNSI
+26     VNSMALLCAP     VNSMALLCAP
+27          VNUTI          VNUTI
+28          VNX50          VNX50
+29    VNXALLSHARE    VNXALLSHARE
+30    VNXALLSHARE    VNXALLSHARE
+VNINDEX hiện tại:                    time   symbol     name  prior        value   total_vol  \
+0  2025-08-22T14:45:15Z  VNINDEX  VNINDEX   1688  1645.469971  2234243072
+
+      total_val  advance  decline  nochange  ceil  floor     change  \
+0  6.067808e+12       71      251        27     0      0 -42.529999
+
+   change_pct
+0       -2.52
+Foreign trading VIC:                    time symbol  total_room  current_room  buy_vol  sell_vol  \
+0  2025-08-22T14:59:31Z    VIC   186240000     171226000    57880     76800
+
+       buy_val     sell_val
+0  71619900000  95238300000
+```
+
 ### 2. Đánh giá chiến lược giao dịch với Metrics nâng cao
 
 ```python
@@ -468,6 +548,18 @@ profit_factor_tpsl = metrics_tpsl.profit_factor()
 print(f"{'Profit Factor':<20} {profit_factor_orig:<15.3f} {profit_factor_tpsl:<15.3f} {((profit_factor_tpsl/profit_factor_orig-1)*100 if profit_factor_orig != 0 else 0):<14.1f}%")
 ```
 
+```output
+
+📊 SO SÁNH CHIẾN LƯỢC:
+============================================================
+Metric               Original        With TP/SL      Improvement
+============================================================
+Sharpe Ratio         -2.076          -1.992          -4.0          %
+Win Rate             50.6           % 50.9           % 0.3           pp
+Max Drawdown         -54.4          % -52.1          % 2.3           pp
+Profit Factor        0.644           0.660           2.5           %
+```
+
 ### 3. Phân tích quỹ mở và thị trường quốc tế
 
 ```python
@@ -524,6 +616,30 @@ if not usd_vnd.empty:
     print(f"USD/VND: {usd_change:.2f}%")
 ```
 
+```output
+Top 5 quỹ cổ phiếu:
+                                                name    code        nav  \
+0             QUỸ ĐẦU TƯ CỔ PHIẾU NĂNG ĐỘNG BẢO VIỆT   BVFED   31828.00
+1                QUỸ ĐẦU TƯ CHỨNG KHOÁN NĂNG ĐỘNG DC  VFMVF1  108787.18
+2  QUỸ ĐẦU TƯ CỔ PHIẾU TĂNG TRƯỞNG MIRAE ASSET VI...   MAGEF   21435.98
+3            QUỸ ĐẦU TƯ CỔ PHIẾU TẬP TRUNG CỔ TỨC DC  VFMVF4   34008.33
+4                  QUỸ ĐẦU TƯ TĂNG TRƯỞNG THÀNH CÔNG    TCGF   12862.16
+
+   productNavChange.navTo1Months
+0                          17.14
+1                          13.97
+2                          13.38
+3                          12.34
+4                          12.38
+
+So sánh hiệu suất chỉ số 2024:
+========================================
+VNINDEX: 0.00%
+S&P 500: 6.04%
+Nikkei 225: 4.41%
+USD/VND: 2.19%
+```
+
 ### 4. Phân tích báo cáo tài chính và thông tin doanh nghiệp
 
 ```python
@@ -558,6 +674,36 @@ if not ratios.empty:
     available_ratios = [col for col in key_ratios if col in ratios.columns]
     if available_ratios:
         print(ratios[available_ratios].iloc[0])
+```
+
+```output
+Thông tin tổng quan VIC:
+ticker                  VIC
+exchange               HOSE
+industry       Bất động sản
+stockRating             2.7
+Name: 0, dtype: object
+
+Top 5 cổ đông lớn:
+                                                name  ownPercent
+0           Công ty Cổ Phần Tập Đoàn Đầu Tư Việt Nam      0.3249
+1                                    Phạm Nhật Vượng      0.1160
+2  Công Ty Cổ Phần Quản Lý Và Đầu Tư Bất Động Sản...      0.0628
+3                                     Phạm Thu Hương      0.0440
+4                                     Phạm Thúy Hằng      0.0299
+
+Doanh thu 4 quý gần nhất:
+   quarter  revenue investProfit
+0        5   189068         None
+1        5   161428         None
+2        5   101794         None
+3        5   125688         None
+4        5   110490         None
+
+Các tỷ số tài chính chính:
+roe    0.095
+roa    0.016
+Name: 0, dtype: float64
 ```
 
 ## 🆕 Tính năng mới

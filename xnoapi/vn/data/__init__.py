@@ -1,32 +1,50 @@
 from __future__ import annotations
 
-# Company / Finance
-from .company import Company
-
-# Constants (nếu cần dùng trực tiếp)
+# Public constants/helpers
 from .const import *  # noqa: F401,F403
-
-# Core / utils
 from .core import send_request
-from .derivatives import *
-from .finance import Finance
+from .utils import *  # noqa: F401,F403
 
-# Mutual Funds - Fmarket
-from .fund import Fund
+# Stocks theme (consolidated)
+from .stocks import (
+    Company,
+    Finance,
+    Fund,
+    Listing,
+    Quote,
+    Global,
+    MSN,
+    FX,
+    Crypto,
+    WorldIndex,
+    list_liquid_asset,
+    get_hist as get_stock_hist,
+    ping,
+    get_indices,
+    get_market_index_snapshot,
+    get_stock_foreign_trading,
+    get_stock_matches,
+    get_stock_info,
+    get_stock_top_price,
+    Trading,
+)
 
-# Listing
-from .listing import Listing
-from .quant_data import *
+# Derivatives theme
+from .derivatives import get_hist as get_derivatives_hist
 
-# International data
-from .quote_global import FX, Crypto, Global, WorldIndex
+# Backward-compatibility: default get_hist refers to stocks
+get_hist = get_stock_hist
 
-# Market data
-from .quote_market import Quote as MarketQuote
-from .stocks import *
-
-# Price board  (GraphQL)
-from .trading import Trading
-from .utils import *
-
-Quote = MarketQuote
+__all__ = [
+    # helpers
+    "send_request",
+    # stocks theme
+    "Company", "Finance", "Fund", "Listing", "Quote",
+    "Global", "MSN", "FX", "Crypto", "WorldIndex",
+    "list_liquid_asset", "get_stock_hist", "get_hist",
+    "ping", "get_indices", "get_market_index_snapshot",
+    "get_stock_foreign_trading", "get_stock_matches",
+    "get_stock_info", "get_stock_top_price", "Trading",
+    # derivatives
+    "get_derivatives_hist",
+]

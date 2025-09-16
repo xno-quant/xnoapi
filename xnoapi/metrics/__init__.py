@@ -1,3 +1,3 @@
 from xnoapi.metrics.single_asset import TradingBacktest
-
-__all__ = ["TradingBacktest"]
+from xnoapi.metrics.st import StockAlgorithm
+__all__ = ["TradingBacktest", "StockAlgorithm"]
