@@ -1,34 +1,28 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
-
-
 XNO API Library
-===============
+================
 
-⚠️ **Ghi chú**\ : Tài liệu này bắt đầu bằng Tiếng Việt cho cộng đồng địa phương. 🌐 Phiên bản Tiếng Anh có sẵn bên dưới — cuộn xuống hoặc sử dụng mục lục để điều hướng.
+.. note::
+   Tài liệu này bắt đầu bằng Tiếng Việt cho cộng đồng địa phương. Phiên bản Tiếng Anh có sẵn bên dưới — cuộn xuống hoặc sử dụng mục lục để điều hướng.
 
-Chào mừng bạn đến với **XNO API**\ , thư viện Python toàn diện cho phân tích định lượng và truy xuất dữ liệu tài chính, được tối ưu hóa đặc biệt cho thị trường tài chính Việt Nam.
+Chào mừng bạn đến với **XNO API**, thư viện Python toàn diện cho phân tích định lượng và truy xuất dữ liệu tài chính, được tối ưu hóa đặc biệt cho thị trường tài chính Việt Nam.
 
-Với sứ mệnh *"Đưa công cụ phân tích định lượng đến gần hơn với mọi nhà đầu tư Việt Nam"*\ , XNO API liên tục phát triển, tích hợp những công nghệ hiện đại để không chỉ đáp ứng nhu cầu cơ bản về dữ liệu, mà còn giúp bạn xây dựng các chiến lược giao dịch thông minh và hiệu quả.
+Với sứ mệnh *"Đưa công cụ phân tích định lượng đến gần hơn với mọi nhà đầu tư Việt Nam"*, XNO API liên tục phát triển, tích hợp những công nghệ hiện đại để không chỉ đáp ứng nhu cầu cơ bản về dữ liệu, mà còn giúp bạn xây dựng các chiến lược giao dịch thông minh và hiệu quả.
 
 ✨ Tính năng nổi bật
---------------------
+-------------------
 
-🆓 **Hoàn toàn miễn phí & mã nguồn mở**\ : Dễ dàng truy cập và sử dụng, phù hợp với nhà đầu tư cá nhân, nhà phân tích định lượng, và cộng đồng nghiên cứu.
-
-🐍 **Giải pháp Python toàn diện**\ : Các hàm chức năng thân thiện, dễ dàng tích hợp để xây dựng các hệ thống giao dịch tự động.
-
-📊 **Dữ liệu Việt Nam chuyên sâu**\ : Bao gồm cổ phiếu, chỉ số, phái sinh, quỹ mở, dữ liệu quốc tế với cấu trúc phí giao dịch chuẩn Việt Nam.
-
-📈 **Công cụ phân tích mạnh mẽ**\ : Tích hợp sẵn các chỉ số hiệu suất, backtesting, và đánh giá rủi ro.
+- **Hoàn toàn miễn phí & mã nguồn mở**: Dễ dàng truy cập và sử dụng, phù hợp với nhà đầu tư cá nhân, nhà phân tích định lượng, và cộng đồng nghiên cứu.
+- **Giải pháp Python toàn diện**: Các hàm chức năng thân thiện, dễ dàng tích hợp để xây dựng các hệ thống giao dịch tự động.
+- **Dữ liệu Việt Nam chuyên sâu**: Bao gồm cổ phiếu, chỉ số, phái sinh, quỹ mở, dữ liệu quốc tế với cấu trúc phí giao dịch chuẩn Việt Nam.
+- **Công cụ phân tích mạnh mẽ**: Tích hợp sẵn các chỉ số hiệu suất, backtesting, và đánh giá rủi ro.
 
 Bạn chính là một phần quan trọng trong hành trình chuyển đổi số thị trường tài chính Việt Nam. Hãy cùng XNO tạo nên những thay đổi tích cực và hiệu quả!
 
-Tham gia ngay cộng đồng XNO để giao lưu, chia sẻ kinh nghiệm và cập nhật những tính năng mới nhất:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Tham gia cộng đồng
+------------------
 
-🌐 **Website chính thức**\ : `xno.vn <https://xno.vn>`_\ :raw-html-m2r:`<br>`
-👥 **Cộng đồng Quant Finance**\ : `xnoquant.vn <https://xnoquant.vn>`_
+- **Website chính thức**: `xno.vn <https://xno.vn>`_
+- **Cộng đồng Quant Finance**: `xnoquant.vn <https://xnoquant.vn>`_
 
 🚀 Tại sao chọn XNO API?
 ------------------------
@@ -36,32 +30,31 @@ Tham gia ngay cộng đồng XNO để giao lưu, chia sẻ kinh nghiệm và c�
 XNO API giúp rút ngắn thời gian xử lý dữ liệu, hỗ trợ học tập, nghiên cứu và xây dựng hệ thống phân tích giao dịch định lượng một cách hiệu quả – không chỉ là một công cụ trích xuất dữ liệu, mà là nền tảng để phát triển giải pháp đầu tư thông minh cá nhân.
 
 🔎 Truy xuất dữ liệu toàn diện
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-* **Cổ phiếu Việt Nam**\ : Dữ liệu lịch sử, realtime, thông tin doanh nghiệp
-* **Phái sinh**\ : VN30F1M, VN30F2M với dữ liệu tần suất cao
-* **Quỹ mở**\ : Thông tin quỹ, NAV, danh mục đầu tư
-* **Thị trường quốc tế**\ : Chỉ số thế giới, forex, cryptocurrency
-* **Dữ liệu định lượng**\ : OHLCV, order book, foreign trading
+- **Cổ phiếu Việt Nam**: Dữ liệu lịch sử, realtime, thông tin doanh nghiệp
+- **Phái sinh**: VN30F1M, VN30F2M với dữ liệu tần suất cao
+- **Quỹ mở**: Thông tin quỹ, NAV, danh mục đầu tư
+- **Thị trường quốc tế**: Chỉ số thế giới, forex, cryptocurrency
+- **Dữ liệu định lượng**: OHLCV, order book, foreign trading
 
 📊 Dữ liệu thị trường đa dạng
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Từ giá cổ phiếu thời gian thực đến dữ liệu báo cáo tài chính, từ phái sinh VN30 đến các chỉ số quốc tế như S&P 500, Nikkei 225.
 
 📈 Công cụ phân tích hiệu suất
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Tích hợp sẵn các chỉ số Sharpe, Sortino, Max Drawdown, Win Rate, Value at Risk và nhiều metrics quan trọng khác.
 
 🧪 Backtesting chuyên nghiệp
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hỗ trợ backtest chiến lược với cấu trúc phí giao dịch chuẩn thị trường Việt Nam, tính toán PnL chính xác, hỗ trợ Take Profit/Stop Loss.
 
 🖼️ Tích hợp visualization
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dễ dàng mở rộng để tạo các biểu đồ và báo cáo trực quan cho chiến lược giao dịch.
 
@@ -98,22 +91,21 @@ Bạn cần nạp thư viện vào môi trường Python và khởi tạo API ke
 📚 Tài liệu hướng dẫn
 ---------------------
 
-📖 **Tài liệu trực tuyến**\ : https://xnoapi.readthedocs.io\ :raw-html-m2r:`<br>`
-📄 **Phiên bản PDF**\ : Tải xuống\ :raw-html-m2r:`<br>`
-🎯 **Hướng dẫn chi tiết**\ : `xno.vn/docs <https://xno.vn/docs>`_\ :raw-html-m2r:`<br>`
-💬 **Hỗ trợ cộng đồng**\ : `xnoquant.vn <https://xnoquant.vn>`_
+- **Tài liệu trực tuyến**: https://xnoapi.readthedocs.io
+- **Phiên bản PDF**: Tải xuống
+- **Hướng dẫn chi tiết**: `xno.vn/docs <https://xno.vn/docs>`_
+- **Hỗ trợ cộng đồng**: `xnoquant.vn <https://xnoquant.vn>`_
 
 🎯 Ví dụ sử dụng cơ bản
 -----------------------
 
 Truy xuất dữ liệu cổ phiếu và phái sinh Việt Nam
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
    from xnoapi.vn.data.utils import client
    from xnoapi.vn.data import stocks, derivatives
-   from xnoapi.vn.data.quant_data import get_indices
 
    # Khởi tạo client
    client(apikey="your_api_key")
@@ -123,16 +115,18 @@ Truy xuất dữ liệu cổ phiếu và phái sinh Việt Nam
    print("Cổ phiếu thanh khoản cao:", liquid_stocks)
 
    # Dữ liệu lịch sử cổ phiếu VIC (Vingroup)
-   vic_data = stocks.get_hist("VIC")
+   from xnoapi.vn.data import get_stock_hist
+   vic_data = get_stock_hist("VIC", resolution='h')
    print("Dữ liệu VIC:")
    print(vic_data.head())
 
    # Dữ liệu phái sinh VN30F1M theo khung thời gian 1 phút
-   vn30f1m_data = derivatives.get_hist("VN30F1M", "1m")
+   from xnoapi.vn.data import get_derivatives_hist
+   vn30f1m_data = get_derivatives_hist("VN30F1M", "1m")
    print("Dữ liệu VN30F1M:")
    print(vn30f1m_data.head())
 
-.. code-block:: output
+.. code-block:: text
 
    Cổ phiếu thanh khoản cao:        0             1
    0    SHS  3.885972e+10
@@ -167,293 +161,318 @@ Truy xuất dữ liệu cổ phiếu và phái sinh Việt Nam
 --------------------
 
 📊 Dữ liệu tài chính
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~
 
 ``xnoapi.vn.data.stocks``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- ``list_liquid_asset()``: Danh sách cổ phiếu có tính thanh khoản cao trên thị trường Việt Nam
 
-* ``list_liquid_asset()``\ : Danh sách cổ phiếu có tính thanh khoản cao trên thị trường Việt Nam
   .. code-block:: python
 
      liquid_stocks = stocks.list_liquid_asset()
 
-* ``get_hist(asset)``\ : Dữ liệu OHLCV lịch sử của cổ phiếu
+- ``get_stock_hist(symbol, resolution='h')``: Dữ liệu OHLCV lịch sử của cổ phiếu
+
   .. code-block:: python
 
-     vic_data = stocks.get_hist("VIC")
+     from xnoapi.vn.data import get_stock_hist
+     vic_data = get_stock_hist("VIC", resolution='h')
      print("Dữ liệu VIC:")
      print(vic_data.head())
 
 ``xnoapi.vn.data.derivatives``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-* 
-  ``get_hist(asset, frequency)``\ : Dữ liệu thị trường phái sinh (VN30F1M, VN30F2M)
-
-* 
-  Hỗ trợ các frequency: "1m", "5m", "15m", "30m", "1H", "1D"
+- ``get_derivatives_hist(symbol, resolution)``: Dữ liệu thị trường phái sinh (VN30F1M, VN30F2M)
+- Hỗ trợ các frequency: ``"1m"``, ``"5m"``, ``"15m"``, ``"30m"``, ``"1H"``, ``"1D"``
 
   .. code-block:: python
 
      # Dữ liệu phái sinh VN30F1M theo khung thời gian 1 phút
-     vn30f1m_data = derivatives.get_hist("VN30F1M", "1m")
+     from xnoapi.vn.data import get_derivatives_hist
+     vn30f1m_data = get_derivatives_hist("VN30F1M", "1m")
      print("Dữ liệu VN30F1M:")
      print(vn30f1m_data.head())
 
-``xnoapi.vn.data.quant_data`` [MỚI]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``xnoapi.vn.data`` (Quant Data API)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Module dữ liệu định lượng chuyên sâu với API v2:
+- ``ping()``: Kiểm tra kết nối đến dịch vụ
 
-
-* ``ping()``\ : Kiểm tra kết nối đến dịch vụ
   .. code-block:: python
 
-     print("\nPing quant-data:", xnoapi.vn.data.ping())
+     from xnoapi.vn.data import ping
+     print("\nPing quant-data:", ping())
 
-* ``get_indices()``\ : Danh sách các chỉ số thị trường
+- ``get_indices()``: Danh sách các chỉ số thị trường
+
   .. code-block:: python
 
-     print("\nDanh sách chỉ số thị trường:", xnoapi.vn.data.get_indices())
+     from xnoapi.vn.data import get_indices
+     print("\nDanh sách chỉ số thị trường:", get_indices())
 
-* ``get_market_index_snapshot(index_symbol)``\ : Snapshot chỉ số (VNI, HNX-Index, v.v.)
+- ``get_market_index_snapshot(index_symbol)``: Snapshot chỉ số (VNI, HNX-Index, v.v.)
+
   .. code-block:: python
 
+     from xnoapi.vn.data import get_market_index_snapshot
      print("\nget_market_index_snapshot('VNINDEX'):")
-     xnoapi.vn.data.get_market_index_snapshot("VNINDEX")
+     get_market_index_snapshot("VNINDEX")
 
-* ``get_stock_info(symbol)``\ : Thông tin cổ phiếu realtime
+- ``get_stock_info(symbol)``: Thông tin cổ phiếu realtime
+
   .. code-block:: python
 
+     from xnoapi.vn.data import get_stock_info
      print("\nget_stock_info('HPG'):")
-     xnoapi.vn.data.get_stock_info("HPG")
+     get_stock_info("HPG")
 
-* ``get_stock_matches(symbol)``\ : Dữ liệu khớp lệnh gần nhất
+- ``get_stock_matches(symbol)``: Dữ liệu khớp lệnh gần nhất
+
   .. code-block:: python
 
+     from xnoapi.vn.data import get_stock_matches
      print("\nget_stock_matches('HPG'):")
-     xnoapi.vn.data.get_stock_matches("HPG")
+     get_stock_matches("HPG")
 
-* ``get_stock_foreign_trading(symbol)``\ : Giao dịch khối ngoại
+- ``get_stock_foreign_trading(symbol)``: Giao dịch khối ngoại
+
   .. code-block:: python
 
+     from xnoapi.vn.data import get_stock_foreign_trading
      print("\nget_stock_foreign_trading('HPG'):")
-     xnoapi.vn.data.get_stock_foreign_trading("HPG")
+     get_stock_foreign_trading("HPG")
 
-* ``get_stock_top_price(symbol)``\ : Order book snapshot
-  .. code-block::
+- ``get_stock_top_price(symbol)``: Order book snapshot
 
-     xnoapi.vn.data.get_stock_top_price('HPG')
-
-``xnoapi.vn.data.quote_market``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-* ``Quote(symbol).history(start, end, interval)``\ : Dữ liệu lịch sử
   .. code-block:: python
 
-     q = xnoapi.vn.data.Quote("ACB")
+     from xnoapi.vn.data import get_stock_top_price
+     get_stock_top_price('HPG')
+
+``xnoapi.vn.data.stocks`` (Quote functionality)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- ``Quote(symbol).history(start, end, interval)``: Dữ liệu lịch sử
+
+  .. code-block:: python
+
+     from xnoapi.vn.data.stocks import Quote
+     q = Quote("ACB")
      q.history(start="2024-01-01", end="2024-03-31", interval="1D")
 
-* ``Quote(symbol).intraday(page_size, last_time)``\ : Dữ liệu tick intraday
+- ``Quote(symbol).intraday(page_size, last_time)``: Dữ liệu tick intraday
+
   .. code-block:: python
 
-     q = xnoapi.vn.data.Quote("ACB")
+     q = Quote("ACB")
      q.intraday(page_size = 200)
 
-* ``Quote(symbol).price_depth()``\ : Độ sâu giá (accumulated volume)
+- ``Quote(symbol).price_depth()``: Độ sâu giá (accumulated volume)
+
   .. code-block:: python
 
-     q = xnoapi.vn.data.Quote("ACB")
+     q = Quote("ACB")
      q.price_depth()
 
-``xnoapi.vn.data.company`` (Thông tin doanh nghiệp)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``xnoapi.vn.data.stocks`` (Thông tin doanh nghiệp)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- ``Company(symbol).overview()``: Tổng quan công ty
 
-* ``Company(symbol).overview()``\ : Tổng quan công ty
   .. code-block:: python
 
-     c = xnoapi.vn.data.Company("ACB")
+     from xnoapi.vn.data.stocks import Company
+     c = Company("ACB")
      print("\nACB.Company.overview:")
      c.overview()
 
-* ``Company(symbol).profile()``\ : Thông tin chi tiết
+- ``Company(symbol).profile()``: Thông tin chi tiết
+
   .. code-block:: python
 
-     c = xnoapi.vn.data.Company("HPG")
+     c = Company("HPG")
      print("\HPG.Company.profile:")
      c.profile()
 
-* ``Company(symbol).shareholders()``\ : Cổ đông
+- ``Company(symbol).shareholders()``: Cổ đông
+
   .. code-block:: python
 
-     c = xnoapi.vn.data.Company("VCI")
+     c = Company("VCI")
      print("\nVCI.Company.shareholders:")
      c.shareholders()
 
-* ``Company(symbol).officers()``\ : Ban lãnh đạo
+- ``Company(symbol).officers()``: Ban lãnh đạo
+
   .. code-block:: python
 
-     c = xnoapi.vn.data.Company("VNM")
+     c = Company("VNM")
      print("\nVNM.Company.officers:")
      c.officers()
 
-* ``Company(symbol).subsidiaries()``\ : Công ty con
+- ``Company(symbol).subsidiaries()``: Công ty con
+
   .. code-block:: python
 
-     c = xnoapi.vn.data.Company("VIC")
+     c = Company("VIC")
      print("\nVIC.Company.subsidiaries:")
      c.subsidiaries()
 
-* ``Company(symbol).events()``\ : Sự kiện quan trọng
+- ``Company(symbol).events()``: Sự kiện quan trọng
+
   .. code-block:: python
 
-     c = xnoapi.vn.data.Company("VCB")
+     c = Company("VCB")
      print("\nVCB.Company.events:")
      c.events()
 
-* ``Company(symbol).news()``\ : Tin tức hoạt động
+- ``Company(symbol).news()``: Tin tức hoạt động
+
   .. code-block:: python
 
-     c = xnoapi.vn.data.Company("FPT")
+     c = Company("FPT")
      print("\nFPT.Company.news:")
      c.news()
 
-* ``Company(symbol).ratio_summary()``\ : Tỷ số tài chính
+- ``Company(symbol).ratio_summary()``: Tỷ số tài chính
+
   .. code-block:: python
 
-     c = xnoapi.vn.data.Company("TPB")
+     c = Company("TPB")
      print("\nTPB.Company.ratio_summary:")
      c.ratio_summary()
 
-``xnoapi.vn.data.finance`` (Báo cáo tài chính)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``xnoapi.vn.data.stocks`` (Báo cáo tài chính)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- ``Finance(symbol).income_statement(period='year')``: Báo cáo kết quả kinh doanh
 
-* ``Finance(symbol).income_statement(period='year')``\ : Báo cáo kết quả kinh doanh
   .. code-block:: python
 
-     f = xnoapi.vn.data.Finance("ACB")
+     from xnoapi.vn.data.stocks import Finance
+     f = Finance("ACB")
      print("\nACB.Finance.income_statement(year):")
      f.income_statement(period="year")
 
-* ``Finance(symbol).balance_sheet(period='year')``\ : Bảng cân đối kế toán
+- ``Finance(symbol).balance_sheet(period='year')``: Bảng cân đối kế toán
+
   .. code-block:: python
 
-     f = xnoapi.vn.data.Finance("HPG")
+     f = Finance("HPG")
      print("\nACB.Finance.balance_sheet(year):")
      f.balance_sheet(period="year")
 
-* ``Finance(symbol).cash_flow(period='year')``\ : Báo cáo lưu chuyển tiền tệ
+- ``Finance(symbol).cash_flow(period='year')``: Báo cáo lưu chuyển tiền tệ
+
   .. code-block:: python
 
-     f = xnoapi.vn.data.Finance("VNM")
+     f = Finance("VNM")
      print("\nACB.Finance.cash_flow(year):")
      f.cash_flow(period="year")
 
-``xnoapi.vn.data.fund`` [MỚI] (Quỹ mở)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``xnoapi.vn.data.stocks`` [MỚI] (Quỹ mở)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- ``Fund().listing(fund_type="")``: Danh sách quỹ mở (BALANCED, BOND, STOCK)
 
-* ``Fund().listing(fund_type="")``\ : Danh sách quỹ mở (BALANCED, BOND, STOCK)
   .. code-block:: python
 
-     fund = xnoapi.vn.data.Fund()
+     from xnoapi.vn.data.stocks import Fund
+     fund = Fund()
      print("\nFmarket.Fund.listing(fund_type='STOCK'):")
      df_funds = fund.listing(fund_type="STOCK")
      df_funds
 
-* ``Fund().filter(q)``\ : Tìm kiếm quỹ theo tên
+- ``Fund().filter(q)``: Tìm kiếm quỹ theo tên
+
   .. code-block:: python
 
-     fund = xnoapi.vn.data.Fund()
+     fund = Fund()
      fund.filter('RVPIF')
 
-``xnoapi.vn.data.quote_global``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``xnoapi.vn.data.stocks`` (Global Market Data)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- ``Global().fx(symbol).quote.history(start, end)``: Tỷ giá ngoại tệ (USDVND, EURUSD)
 
-* ``Global().fx(symbol).quote.history(start, end)``\ : Tỷ giá ngoại tệ (USDVND, EURUSD)
   .. code-block:: python
 
-     Global = xnoapi.vn.data.Global()
+     from xnoapi.vn.data.stocks import Global
+     Global = Global()
      print("\nGlobal.FX USDVND:")
      Global.fx("USDVND").quote.history(start="2024-01-01", end="2024-12-31")
 
-* ``Global().crypto(symbol).quote.history(start, end)``\ : Cryptocurrency (BTC, ETH)
+- ``Global().crypto(symbol).quote.history(start, end)``: Cryptocurrency (BTC, ETH)
+
   .. code-block:: python
 
-     Global = xnoapi.vn.data.Global()
+     Global = Global()
      print("\nGlobal.BTCUSD:")
      Global.crypto("BTCUSD").quote.history(start="2024-01-01", end="2024-12-31")
 
-* ``Global().world_index(symbol).quote.history(start, end)``\ : Chỉ số quốc tế (DJI, SPX, N225)
+- ``Global().world_index(symbol).quote.history(start, end)``: Chỉ số quốc tế (DJI, SPX, N225)
+
   .. code-block:: python
 
-     Global = xnoapi.vn.data.Global()
-     print("\nGlobal.BTCUSD:")
+     Global = Global()
+     print("\nGlobal.DJI:")
      Global.world_index("DJI").quote.history(start="2024-01-01", end="2024-12-31")
 
-``xnoapi.vn.data.trading`` (Price Board)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``xnoapi.vn.data.stocks`` (Price Board)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- ``Trading.price_board(symbols)``: Bảng giá realtime với thông tin foreign, ceiling/floor
 
-* ``Trading.price_board(symbols)``\ : Bảng giá realtime với thông tin foreign, ceiling/floor
   .. code-block:: python
 
-     xnoapi.vn.data.Trading.price_board(["VCB","ACB","TCB"])
+     from xnoapi.vn.data.stocks import Trading
+     Trading.price_board(["VCB","ACB","TCB"])
 
 📈 Phân tích & đánh giá hiệu suất
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 ``xnoapi.vn.metrics.Metrics``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Bao gồm các chỉ số quan trọng:
 
-
-* **Sharpe Ratio**\ : Đánh giá hiệu suất điều chỉnh theo rủi ro
-* **Sortino Ratio**\ : Tập trung vào downside risk
-* **Calmar Ratio**\ : Annual Return / Max Drawdown
-* **Max Drawdown**\ : Mức thua lỗ tối đa
-* **Average Gain/Loss**\ : Lãi/lỗ trung bình
-* **Win Rate**\ : Tỷ lệ giao dịch thành công
-* **Profit Factor**\ : Tổng lãi / Tổng lỗ
-* **Value at Risk (VaR)**\ : Rủi ro tại mức tin cậy nhất định
-* **Risk of Ruin**\ : Xác suất phá sản
+- **Sharpe Ratio**
+- **Sortino Ratio**
+- **Calmar Ratio**
+- **Max Drawdown**
+- **Average Gain/Loss**
+- **Win Rate**
+- **Profit Factor**
+- **Value at Risk (VaR)**
+- **Risk of Ruin**
 
 ``xnoapi.vn.metrics.Backtest_Derivates``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-* Logic backtesting cho chiến lược giao dịch phái sinh
-* Hỗ trợ mô hình phí giao dịch chuẩn Việt Nam (transaction fee + overnight fee)
-* Tính toán PnL thô và sau phí
-* Ước tính vốn tối thiểu cần thiết
+- Logic backtesting cho chiến lược giao dịch phái sinh
+- Hỗ trợ mô hình phí giao dịch chuẩn Việt Nam (transaction fee + overnight fee)
+- Tính toán PnL thô và sau phí
+- Ước tính vốn tối thiểu cần thiết
 
 ``xnoapi.metrics.TradingBacktest`` [NÂNG CẤP]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lớp backtesting đa năng với các tính năng mới:
-
-
-* **Take Profit/Stop Loss**\ : ``apply_tp_sl(df, tp_percentage, sl_percentage)``
-* **Trailing Stop Loss**\ : ``apply_tp_sl_trailing(df, tp_percentage, sl_percentage)``
-* **Metrics tổng hợp**\ : Sharpe, Sortino, Calmar, Max Drawdown, Win Rate, Profit Factor, Risk of Ruin
-* **Flexible PnL**\ : Hỗ trợ raw và after-fees PnL calculation
+- **Take Profit/Stop Loss**: ``apply_tp_sl(df, tp_percentage, sl_percentage)``
+- **Trailing Stop Loss**: ``apply_tp_sl_trailing(df, tp_percentage, sl_percentage)``
+- **Metrics tổng hợp**: Sharpe, Sortino, Calmar, Max Drawdown, Win Rate, Profit Factor, Risk of Ruin
+- **Flexible PnL**: Hỗ trợ raw và after-fees PnL calculation
 
 🧪 Ví dụ thực hành
 ------------------
 
 1. Phân tích dữ liệu định lượng với API v2
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
-   from xnoapi.vn.data.quant_data import *
+   from xnoapi.vn.data import *
    import datetime as dt
 
    # Kiểm tra kết nối
@@ -472,7 +491,7 @@ Lớp backtesting đa năng với các tính năng mới:
    foreign_data = get_stock_foreign_trading("VIC")
    print("Foreign trading VIC:", foreign_data)
 
-.. code-block:: output
+.. code-block:: text
 
    ✅ Kết nối thành công!
    Các chỉ số có sẵn:            symbol           name
@@ -522,7 +541,7 @@ Lớp backtesting đa năng với các tính năng mới:
    0  71619900000  95238300000
 
 2. Đánh giá chiến lược giao dịch với Metrics nâng cao
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -549,7 +568,8 @@ Lớp backtesting đa năng với các tính năng mới:
 
    # Lấy dữ liệu và tạo tín hiệu
    print("📥 Đang tải dữ liệu VN30F1M...")
-   df = derivatives.get_hist("VN30F1M", "5m")  # 5 phút cho phân tích chi tiết
+   from xnoapi.vn.data import get_derivatives_hist
+   df = get_derivatives_hist("VN30F1M", "5m")  # 5 phút cho phân tích chi tiết
    df_pos = gen_position_rsi(df)
 
    # Áp dụng Take Profit/Stop Loss
@@ -558,7 +578,7 @@ Lớp backtesting đa năng với các tính năng mới:
    df_pos["position_tpsl"] = df_pos_with_tpsl
 
    for col in df_pos.columns:
-       df_pos[col.lower()] = df_pos[col]
+    	df_pos[col.lower()] = df_pos[col]
    df_pos["Date"] = df_pos["Date"].astype(str)
    df_pos["time"] = df_pos["time"].astype(str)
 
@@ -594,8 +614,7 @@ Lớp backtesting đa năng với các tính năng mới:
    profit_factor_tpsl = metrics_tpsl.profit_factor()
    print(f"{'Profit Factor':<20} {profit_factor_orig:<15.3f} {profit_factor_tpsl:<15.3f} {((profit_factor_tpsl/profit_factor_orig-1)*100 if profit_factor_orig != 0 else 0):<14.1f}%")
 
-.. code-block:: output
-
+.. code-block:: text
 
    📊 SO SÁNH CHIẾN LƯỢC:
    ============================================================
@@ -607,12 +626,11 @@ Lớp backtesting đa năng với các tính năng mới:
    Profit Factor        0.644           0.660           2.5           %
 
 3. Phân tích quỹ mở và thị trường quốc tế
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
-   from xnoapi.vn.data.fund import Fund
-   from xnoapi.vn.data.quote_global import Global
+   from xnoapi.vn.data.stocks import Fund, Global
    import datetime as dt
 
    # Phân tích quỹ mở
@@ -663,7 +681,7 @@ Lớp backtesting đa năng với các tính năng mới:
        usd_change = calculate_return(usd_vnd)
        print(f"USD/VND: {usd_change:.2f}%")
 
-.. code-block:: output
+.. code-block:: text
 
    Top 5 quỹ cổ phiếu:
                                                    name    code        nav  \
@@ -688,12 +706,11 @@ Lớp backtesting đa năng với các tính năng mới:
    USD/VND: 2.19%
 
 4. Phân tích báo cáo tài chính và thông tin doanh nghiệp
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
-   from xnoapi.vn.data.company import Company
-   from xnoapi.vn.data.finance import Finance
+   from xnoapi.vn.data.stocks import Company, Finance
 
    # Phân tích VIC - Vingroup
    symbol = "VIC"
@@ -713,7 +730,7 @@ Lớp backtesting đa năng với các tính năng mới:
    # Báo cáo tài chính
    income_stmt = finance.income_statement(period='quarter')  # Báo cáo quý
    print("\nDoanh thu 4 quý gần nhất:")
-   print(income_stmt[["quarter", "revenue", "investProfit"]].head())
+   print(income_stmt([["quarter", "revenue", "investProfit"]]).head())
 
    # Tỷ số tài chính
    ratios = company.ratio_summary()
@@ -724,7 +741,7 @@ Lớp backtesting đa năng với các tính năng mới:
        if available_ratios:
            print(ratios[available_ratios].iloc[0])
 
-.. code-block:: output
+.. code-block:: text
 
    Thông tin tổng quan VIC:
    ticker                  VIC
@@ -754,51 +771,198 @@ Lớp backtesting đa năng với các tính năng mới:
    roa    0.016
    Name: 0, dtype: float64
 
+5. Ping + Danh sách chỉ số + Snapshot VNINDEX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   from xnoapi.vn.data import (
+       Company, Finance, Fund, Listing, Quote, Global, MSN,
+       list_liquid_asset,
+       get_indices, get_market_index_snapshot,
+       get_stock_foreign_trading, get_stock_matches, get_stock_info, get_stock_top_price,
+       Trading,
+       get_derivatives_hist,
+   )
+
+   print("Ping:", 'OK' if Trading and True else 'Loaded')
+   print("Indices:")
+   display(get_indices().head(1))
+
+   print("VNINDEX snapshot:")
+   display(get_market_index_snapshot('VNINDEX').head(1))
+
+.. code-block:: text
+
+   Ping: OK
+   Indices:
+             symbol name
+   0            HNX  HNX
+
+   VNINDEX snapshot:
+                      time   symbol     name       prior        value  total_vol  total_val  advance  decline  nochange  ceil  floor    change  change_pct
+   0  2025-09-15T15:05:05Z  VNINDEX  VNINDEX  1667.26001  1684.900024  1122425856  3.425463e+12      222       74        58     0      0  17.639999        1.06
+
+6. Thông tin cổ phiếu HPG (info, matches, top price, foreign)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   symbol = 'HPG'
+   print("Stock info HPG:")
+   display(get_stock_info(symbol).head(1))
+
+   print("Stock matches HPG:")
+   display(get_stock_matches(symbol).head(1))
+
+   print("Stock top price HPG:")
+   display(get_stock_top_price(symbol).head(1))
+
+   print("Foreign trading:")
+   display(get_stock_foreign_trading(symbol).head(1))
+
+.. code-block:: text
+
+   Stock info HPG:
+     symbol                  time   open   high   low  close     avg  ceil  floor  prior
+   0    HPG  2025-09-15T15:33:13Z  30.25  30.85  30.1  30.35  30.451  32.1   27.9     30
+
+   Stock matches HPG:
+                      time symbol  price  volume side
+   0  2025-09-15T14:45:04Z    HPG  30.35      50    S
+
+   Stock top price HPG:
+     symbol source                  time    bp    bq    ap    aq  total_bid  total_ask
+   0    HPG         2025-09-15T14:45:04Z  None  None  None  None          0          0
+
+   Foreign trading:
+                      time symbol  total_room  current_room  buy_vol  sell_vol       buy_val      sell_val
+   0  2025-09-15T15:33:13Z    HPG   376098000     229122000   356690    942100  108758000000  286886000000
+
+7. Company/Finance/Fund/Listing (ví dụ với HPG)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   comp = Company('HPG')
+   print('Company overview:')
+   display(comp.overview().head(1))
+
+   print('Company profile:')
+   display(comp.profile().head(1))
+
+   fin = Finance('HPG')
+   print('Income statement (year):')
+   display(fin.income_statement(period='year').head(1))
+
+   f = Fund()
+   print('Funds listing (head):')
+   display(f.listing().head(1))
+
+   lst = Listing()
+   print('Listing symbols_by_exchange:')
+   print(lst.symbols_by_exchange())
+
+.. code-block:: text
+
+   Company overview:
+     exchange shortName  industryID industryIDv2 industryIdLevel2 industryIdLevel4           industry       industryEn establishedYear  noEmployees  noShareholders  foreignPercent                    website  stockRating  deltaInWeek  deltaInMonth  deltaInYear  outstandingShare  issueShare companyType ticker
+   0     HOSE    Hòa Phát         159         1757             1700             1757  Tài nguyên Cơ bản  Basic Resources            2001        32780          165914           0.191  http://www.hoaphat.com.vn          3.1        0.041         0.022         0.09            7675.5      7675.5         CT    HPG
+
+   Company profile:
+       id                       companyName ticker                                       companyProfile                                        historyDev                                      companyPromise                                        businessRisk                                     keyDevelopments                                  businessStrategies
+   0  None  Công ty Cổ phần Tập đoàn Hòa Phát   None  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...
+
+   Income statement (year):
+     ticker  quarter  year  revenue  yearRevenueGrowth quarterRevenueGrowth  costOfGoodSold  grossProfit  operationExpense  operationProfit  yearOperationProfitGrowth  quarterOperationProfitGrowth  interestExpense  preTaxProfit  postTaxProfit  shareHolderIncome  yearShareHolderIncomeGrowth quarterShareHolderIncomeGrowth investProfit serviceProfit otherProfit provisionExpense operationIncome  ebitda
+   0    HPG        5  2024   138855              0.167                 None         -120358        18498             -3883            14615                      0.511                         None            -2287         13694          12020              12021                         0.759                           None        None         None        None             None            None   21530
+
+   Funds listing (head):
+      id                                      name shortName    code subCode  tradeCode     sipCode    price       nav  lastYearNav buyMin buyMax buyMinValue buyMaxValue  sellMin sellMinValue  transferSellMin  isOnlySellMinNotSellAll  holdingMin instock  holdingVolume issueVolume issueValue  firstIssueAt      approveAt     endIssueAt maturityAt                                            website                                         websiteURL customField customValue  expectedReturn  managementFee  performanceFee closedOrderBookAt  closedOrderBookShiftDay closedBankNote productTradingSession  completeTransactionDuration                                        description  balance  feeBalance     vsdFeeId  avgAnnualReturn  isTransferred       createAt       updateAt productAssetAllocationList productAssetAllocationModelList productAssetAllocationModel1 productAssetAllocationModel2          type         status riskLevel moneyTransferSyntax productBond productCD productGold productFeeList productFeeSipList productFeeListTemp productFeeSipListTemp productFeeDiscountList productTransactionDateList productTransactionDateModelList productSupervisoryBankAccount productSupervisoryBankAccountList productTopHoldingList productTopHoldingBondList productAssetHoldingList productIndustriesHoldingList productDocuments  isDelete  isProductIpo contentHome fundReport hsbcCode productProgramList  owner.id                               owner.encodeURL       owner.code                                        owner.name  owner.userId   owner.userCode                 owner.email             owner.email2 owner.shortName                                        owner.address1  owner.phone  owner.phonePostal                 owner.website                                   owner.templateContract owner.hsbcCode  owner.securityDepositoryCenter.id owner.securityDepositoryCenter.code owner.securityDepositoryCenter.name                                      owner.avatarUrl  owner.isEnableEsign  owner.isSignBeforeBuy  owner.isRequiredFatcaInfo owner.withdrawLimitSession owner.withdrawLimitDaily owner.buySellLimitDaily  fundType.id fundType.name  dataFundAssetType.id dataFundAssetType.name dataFundAssetType.code  productFund.id  productFund.ipoStartTime  productFund.ipoEndTime  productFund.issueAt productFund.surveyIpoTemplate  productFund.isBuyByReward productFund.updateAssetHoldingTime productFund.ipoStatusCode  productNavChange.navToPrevious  productNavChange.navToLastYear  productNavChange.navToEstablish  productNavChange.navTo1Months  productNavChange.navTo3Months  productNavChange.navTo6Months  productNavChange.navTo12Months  productNavChange.navTo24Months  productNavChange.navTo36Months  productNavChange.navTo60Months  productNavChange.annualizedReturn36Months  productNavChange.navToBeginning  productNavChange.updateAt  extra.lastNAVDate  extra.lastNAV  extra.currentNAV
+   0  28  QUỸ ĐẦU TƯ CHỨNG KHOÁN NĂNG ĐỘNG DC      DCDS  VFMVF1    None  VFMVF1N001  VFMVF1S006  10000.0  108248.43     81619.28   None   None        None         None     10.0         None             10.0                    False          10    None     3455975.83       None       None  1.084986e+12  1596772793489  1902589200000      None  https://vfm.com.vn/quy-dau-tu-chung-khoan-viet...  https://vfm.com.vn/quy-dau-tu-chung-khoan-viet...                      0.0           1.95             NaN              None                      None           None                  None                            2  DCDS là quỹ cổ phiếu có danh mục gồm cổ phiếu ...      0.0         0.0  VFMVF1N001            36.0           True  1596771759776  1737444441836                        None                           None                         None                             None                   TRADING_FUND  PRODUCT_ACTIVE      None               None       None     None       None          None              None                 None                        None                         None                             None                              None                                   None              None                          None                               None                         None                  None                   None                  None                 None               False          False       None      None
+
+   Listing symbols_by_exchange:
+   {'HOSE': ['HPG', 'VIC', 'VNM'], 'HNX': [], 'UPCOM': []}
+
+8. Global quotes (MSN/Yahoo)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   g = Global()
+   print('FX EURUSD:')
+   df_fx = g.fx('EURUSD').quote.history('2024-01-01', '2024-03-01', '1h')
+   print(df_fx.head())
+
+.. code-block:: text
+
+   FX EURUSD:
+   Empty DataFrame
+   Columns: [time, open, high, low, close, volume]
+   Index: []
+
+9. Demo backtest MA(20/50) đơn giản (VIC, timeframe giờ)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   from xnoapi.vn.metrics.backtest import Backtest_Stock
+   from xnoapi.vn.data import get_stock_hist
+   import pandas as pd
+
+   df = get_stock_hist('VIC', resolution='h')
+   df = df[['Date', 'time', 'Close']].dropna().copy()
+
+   close = pd.to_numeric(df['Close'], errors='coerce')
+   ma20  = close.rolling(20, min_periods=20).mean()
+   ma50  = close.rolling(50, min_periods=50).mean()
+   signal = (ma20 > ma50).astype(int).shift(1).fillna(0)
+
+   df['position'] = signal * 100
+   bt_input = df[['Date', 'time', 'Close', 'position']]
+   bt = Backtest_Stock(bt_input, pnl_type='after_fees')
+   bt.plot_PNL("VIC – MA(20/50) long-only")  # hiển thị biểu đồ PnL
+
 🆕 Tính năng mới
 ----------------
 
 📊 Quant Data API v2
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~
 
-
-* Dữ liệu OHLCV với timestamp chính xác đến giây
-* Order book snapshot realtime
-* Foreign trading data
-* Market index snapshot
+- Dữ liệu OHLCV với timestamp chính xác đến giây
+- Order book snapshot realtime
+- Foreign trading data
+- Market index snapshot
 
 🏦 Quỹ mở & Tài sản quốc tế
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-* Thông tin quỹ mở đầy đủ (cổ phiếu, trái phiếu, cân bằng)
-* Danh mục đầu tư và phân bổ tài sản của quỹ
-* Dữ liệu forex, cryptocurrency, chỉ số quốc tế
+- Thông tin quỹ mở đầy đủ (cổ phiếu, trái phiếu, cân bằng)
+- Danh mục đầu tư và phân bổ tài sản của quỹ
+- Dữ liệu forex, cryptocurrency, chỉ số quốc tế
 
 🎯 Take Profit/Stop Loss nâng cao
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-* Fixed TP/SL với hold mechanism
-* Trailing Stop Loss động
-* Backtesting với risk management tự động
+- Fixed TP/SL với hold mechanism
+- Trailing Stop Loss động
+- Backtesting với risk management tự động
 
 📈 Metrics mở rộng
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
-
-* Risk of Ruin calculation
-* Value at Risk (VaR)
-* Calmar Ratio
-* Enhanced Sortino Ratio
+- Risk of Ruin calculation
+- Value at Risk (VaR)
+- Calmar Ratio
+- Enhanced Sortino Ratio
 
 🏢 Thông tin doanh nghiệp chi tiết
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-* Báo cáo tài chính theo quý/năm
-* Thông tin cổ đông, ban lãnh đạo
-* Tin tức và sự kiện quan trọng
-* Tỷ số tài chính tổng hợp
+- Báo cáo tài chính theo quý/năm
+- Thông tin cổ đông, ban lãnh đạo
+- Tin tức và sự kiện quan trọng
+- Tỷ số tài chính tổng hợp
 
 🌟 Cộng đồng & Hỗ trợ
 ---------------------
@@ -806,23 +970,22 @@ Lớp backtesting đa năng với các tính năng mới:
 XNO phát triển nhờ sự chung tay của cộng đồng những người yêu thích công nghệ và tài chính định lượng. Mỗi dòng code, mỗi bản sửa lỗi đều là minh chứng cho sự đóng góp quý giá của các bạn.
 
 💬 Tham gia cộng đồng
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
-🌐 **Website chính thức**\ : `xno.vn <https://xno.vn>`_ - Tin tức, blog, và tài nguyên\ :raw-html-m2r:`<br>`
-👥 **Cộng đồng Quant**\ : `xnoquant.vn <https://xnoquant.vn>`_ - Thảo luận, chia sẻ chiến lược\ :raw-html-m2r:`<br>`
-📧 **Hỗ trợ**\ : support@xno.vn\ :raw-html-m2r:`<br>`
-🐛 **Báo lỗi**\ : GitHub Issues
+- **Website chính thức**: `xno.vn <https://xno.vn>`_ - Tin tức, blog, và tài nguyên
+- **Cộng đồng Quant**: `xnoquant.vn <https://xnoquant.vn>`_ - Thảo luận, chia sẻ chiến lược
+- **Hỗ trợ**: support@xno.vn
+- **Báo lỗi**: GitHub Issues
 
 🤝 Đóng góp
-^^^^^^^^^^^
+~~~~~~~~~~~
 
 Chúng tôi hoan nghênh mọi đóng góp từ cộng đồng! Bạn có thể:
 
-
-* 🌟 Star dự án trên GitHub
-* 🐛 Báo cáo lỗi hoặc đề xuất tính năng
-* 📖 Cải thiện tài liệu
-* 💻 Đóng góp code
+- Star dự án trên GitHub
+- Báo cáo lỗi hoặc đề xuất tính năng
+- Cải thiện tài liệu
+- Đóng góp code
 
 ⚠️ Tuyên bố miễn trách nhiệm
 ----------------------------
@@ -834,6 +997,8 @@ Các tác giả không chịu trách nhiệm đối với bất kỳ tổn thấ
 XNO API không cung cấp tư vấn đầu tư hay tín hiệu giao dịch. Người dùng hoàn toàn tự chịu trách nhiệm khi sử dụng thư viện.
 
 📄 Giấy phép
-------------
+-----------
 
 XNO API được phát hành theo **Giấy phép MIT**. Xem chi tiết tại `LICENSE <https://github.com/xnoproject/xnoapi/blob/main/LICENSE>`_.
+
+
