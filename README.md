@@ -93,7 +93,7 @@ client(apikey="your_api_key")
 ```python
 from xnoapi.vn.data.utils import client
 from xnoapi.vn.data import stocks, derivatives
-from xnoapi.vn.data.quant_data import get_indices
+<!-- removed: get_indices no longer exists in xnoapi.vn.data.quant_data -->
 
 # Khởi tạo client
 client(apikey="your_api_key")
@@ -103,12 +103,14 @@ liquid_stocks = stocks.list_liquid_asset()
 print("Cổ phiếu thanh khoản cao:", liquid_stocks)
 
 # Dữ liệu lịch sử cổ phiếu VIC (Vingroup)
-vic_data = stocks.get_hist("VIC")
+from xnoapi.vn.data import get_stock_hist
+vic_data = get_stock_hist("VIC", resolution='h')
 print("Dữ liệu VIC:")
 print(vic_data.head())
 
 # Dữ liệu phái sinh VN30F1M theo khung thời gian 1 phút
-vn30f1m_data = derivatives.get_hist("VN30F1M", "1m")
+from xnoapi.vn.data import get_derivatives_hist
+vn30f1m_data = get_derivatives_hist("VN30F1M", "1m")
 print("Dữ liệu VN30F1M:")
 print(vn30f1m_data.head())
 ```
@@ -154,193 +156,212 @@ Dữ liệu VN30F1M:
   ```python
   liquid_stocks = stocks.list_liquid_asset()
   ```
-- `get_hist(asset)`: Dữ liệu OHLCV lịch sử của cổ phiếu
+- `get_stock_hist(symbol, resolution='h')`: Dữ liệu OHLCV lịch sử của cổ phiếu
   ```python
-  vic_data = stocks.get_hist("VIC")
+  from xnoapi.vn.data import get_stock_hist
+  vic_data = get_stock_hist("VIC", resolution='h')
   print("Dữ liệu VIC:")
   print(vic_data.head())
   ```
 
 #### `xnoapi.vn.data.derivatives`
 
-- `get_hist(asset, frequency)`: Dữ liệu thị trường phái sinh (VN30F1M, VN30F2M)
+- `get_derivatives_hist(symbol, resolution)`: Dữ liệu thị trường phái sinh (VN30F1M, VN30F2M)
 
 - Hỗ trợ các frequency: "1m", "5m", "15m", "30m", "1H", "1D"
   ```python
   # Dữ liệu phái sinh VN30F1M theo khung thời gian 1 phút
-  vn30f1m_data = derivatives.get_hist("VN30F1M", "1m")
+  from xnoapi.vn.data import get_derivatives_hist
+  vn30f1m_data = get_derivatives_hist("VN30F1M", "1m")
   print("Dữ liệu VN30F1M:")
   print(vn30f1m_data.head())
   ```
 
-#### `xnoapi.vn.data.quant_data` [MỚI]
+<!-- removed: xnoapi.vn.data.quant_data module does not exist in codebase -->
 
-Module dữ liệu định lượng chuyên sâu với API v2:
+#### `xnoapi.vn.data` (Quant Data API)
+
+Module dữ liệu định lượng chuyên sâu:
 
 - `ping()`: Kiểm tra kết nối đến dịch vụ
   ```python
-  print("\nPing quant-data:", xnoapi.vn.data.ping())
+  from xnoapi.vn.data import ping
+  print("\nPing quant-data:", ping())
   ```
 - `get_indices()`: Danh sách các chỉ số thị trường
   ```python
-  print("\nDanh sách chỉ số thị trường:", xnoapi.vn.data.get_indices())
+  from xnoapi.vn.data import get_indices
+  print("\nDanh sách chỉ số thị trường:", get_indices())
   ```
 - `get_market_index_snapshot(index_symbol)`: Snapshot chỉ số (VNI, HNX-Index, v.v.)
   ```python
+  from xnoapi.vn.data import get_market_index_snapshot
   print("\nget_market_index_snapshot('VNINDEX'):")
-  xnoapi.vn.data.get_market_index_snapshot("VNINDEX")
+  get_market_index_snapshot("VNINDEX")
   ```
 - `get_stock_info(symbol)`: Thông tin cổ phiếu realtime
   ```python
+  from xnoapi.vn.data import get_stock_info
   print("\nget_stock_info('HPG'):")
-  xnoapi.vn.data.get_stock_info("HPG")
+  get_stock_info("HPG")
   ```
 - `get_stock_matches(symbol)`: Dữ liệu khớp lệnh gần nhất
   ```python
+  from xnoapi.vn.data import get_stock_matches
   print("\nget_stock_matches('HPG'):")
-  xnoapi.vn.data.get_stock_matches("HPG")
+  get_stock_matches("HPG")
   ```
 - `get_stock_foreign_trading(symbol)`: Giao dịch khối ngoại
   ```python
+  from xnoapi.vn.data import get_stock_foreign_trading
   print("\nget_stock_foreign_trading('HPG'):")
-  xnoapi.vn.data.get_stock_foreign_trading("HPG")
+  get_stock_foreign_trading("HPG")
   ```
 - `get_stock_top_price(symbol)`: Order book snapshot
-  ```
-  xnoapi.vn.data.get_stock_top_price('HPG')
+  ```python
+  from xnoapi.vn.data import get_stock_top_price
+  get_stock_top_price('HPG')
   ```
 
-#### `xnoapi.vn.data.quote_market`
+<!-- removed: xnoapi.vn.data.quote_market does not exist -->
+
+#### `xnoapi.vn.data.stocks` (Quote functionality)
 
 - `Quote(symbol).history(start, end, interval)`: Dữ liệu lịch sử
   ```python
-  q = xnoapi.vn.data.Quote("ACB")
+  from xnoapi.vn.data.stocks import Quote
+  q = Quote("ACB")
   q.history(start="2024-01-01", end="2024-03-31", interval="1D")
   ```
 - `Quote(symbol).intraday(page_size, last_time)`: Dữ liệu tick intraday
   ```python
-  q = xnoapi.vn.data.Quote("ACB")
+  q = Quote("ACB")
   q.intraday(page_size = 200)
   ```
 - `Quote(symbol).price_depth()`: Độ sâu giá (accumulated volume)
   ```python
-  q = xnoapi.vn.data.Quote("ACB")
+  q = Quote("ACB")
   q.price_depth()
   ```
 
-#### `xnoapi.vn.data.company` (Thông tin doanh nghiệp)
+#### `xnoapi.vn.data.stocks` (Thông tin doanh nghiệp)
 
 - `Company(symbol).overview()`: Tổng quan công ty
   ```python
-  c = xnoapi.vn.data.Company("ACB")
+  from xnoapi.vn.data.stocks import Company
+  c = Company("ACB")
   print("\nACB.Company.overview:")
   c.overview()
   ```
 - `Company(symbol).profile()`: Thông tin chi tiết
   ```python
-  c = xnoapi.vn.data.Company("HPG")
+  c = Company("HPG")
   print("\HPG.Company.profile:")
   c.profile()
   ```
 - `Company(symbol).shareholders()`: Cổ đông
   ```python
-  c = xnoapi.vn.data.Company("VCI")
+  c = Company("VCI")
   print("\nVCI.Company.shareholders:")
   c.shareholders()
   ```
 - `Company(symbol).officers()`: Ban lãnh đạo
   ```python
-  c = xnoapi.vn.data.Company("VNM")
+  c = Company("VNM")
   print("\nVNM.Company.officers:")
   c.officers()
   ```
 - `Company(symbol).subsidiaries()`: Công ty con
   ```python
-  c = xnoapi.vn.data.Company("VIC")
+  c = Company("VIC")
   print("\nVIC.Company.subsidiaries:")
   c.subsidiaries()
   ```
 - `Company(symbol).events()`: Sự kiện quan trọng
   ```python
-  c = xnoapi.vn.data.Company("VCB")
+  c = Company("VCB")
   print("\nVCB.Company.events:")
   c.events()
   ```
 - `Company(symbol).news()`: Tin tức hoạt động
   ```python
-  c = xnoapi.vn.data.Company("FPT")
+  c = Company("FPT")
   print("\nFPT.Company.news:")
   c.news()
   ```
 - `Company(symbol).ratio_summary()`: Tỷ số tài chính
   ```python
-  c = xnoapi.vn.data.Company("TPB")
+  c = Company("TPB")
   print("\nTPB.Company.ratio_summary:")
   c.ratio_summary()
   ```
 
-#### `xnoapi.vn.data.finance` (Báo cáo tài chính)
+#### `xnoapi.vn.data.stocks` (Báo cáo tài chính)
 
 - `Finance(symbol).income_statement(period='year')`: Báo cáo kết quả kinh doanh
   ```python
-  f = xnoapi.vn.data.Finance("ACB")
+  from xnoapi.vn.data.stocks import Finance
+  f = Finance("ACB")
   print("\nACB.Finance.income_statement(year):")
   f.income_statement(period="year")
   ```
 - `Finance(symbol).balance_sheet(period='year')`: Bảng cân đối kế toán
   ```python
-  f = xnoapi.vn.data.Finance("HPG")
+  f = Finance("HPG")
   print("\nACB.Finance.balance_sheet(year):")
   f.balance_sheet(period="year")
   ```
 - `Finance(symbol).cash_flow(period='year')`: Báo cáo lưu chuyển tiền tệ
   ```python
-  f = xnoapi.vn.data.Finance("VNM")
+  f = Finance("VNM")
   print("\nACB.Finance.cash_flow(year):")
   f.cash_flow(period="year")
   ```
 
-#### `xnoapi.vn.data.fund` [MỚI] (Quỹ mở)
+#### `xnoapi.vn.data.stocks` [MỚI] (Quỹ mở)
 
 - `Fund().listing(fund_type="")`: Danh sách quỹ mở (BALANCED, BOND, STOCK)
   ```python
-  fund = xnoapi.vn.data.Fund()
+  from xnoapi.vn.data.stocks import Fund
+  fund = Fund()
   print("\nFmarket.Fund.listing(fund_type='STOCK'):")
   df_funds = fund.listing(fund_type="STOCK")
   df_funds
   ```
 - `Fund().filter(q)`: Tìm kiếm quỹ theo tên
   ```python
-  fund = xnoapi.vn.data.Fund()
+  fund = Fund()
   fund.filter('RVPIF')
   ```
 
-#### `xnoapi.vn.data.quote_global`
+#### `xnoapi.vn.data.stocks` (Global Market Data)
 
 - `Global().fx(symbol).quote.history(start, end)`: Tỷ giá ngoại tệ (USDVND, EURUSD)
   ```python
-  Global = xnoapi.vn.data.Global()
+  from xnoapi.vn.data.stocks import Global
+  Global = Global()
   print("\nGlobal.FX USDVND:")
   Global.fx("USDVND").quote.history(start="2024-01-01", end="2024-12-31")
   ```
 - `Global().crypto(symbol).quote.history(start, end)`: Cryptocurrency (BTC, ETH)
   ```python
-  Global = xnoapi.vn.data.Global()
+  Global = Global()
   print("\nGlobal.BTCUSD:")
   Global.crypto("BTCUSD").quote.history(start="2024-01-01", end="2024-12-31")
   ```
 - `Global().world_index(symbol).quote.history(start, end)`: Chỉ số quốc tế (DJI, SPX, N225)
   ```python
-  Global = xnoapi.vn.data.Global()
-  print("\nGlobal.BTCUSD:")
+  Global = Global()
+  print("\nGlobal.DJI:")
   Global.world_index("DJI").quote.history(start="2024-01-01", end="2024-12-31")
   ```
 
-#### `xnoapi.vn.data.trading` (Price Board)
+#### `xnoapi.vn.data.stocks` (Price Board)
 
 - `Trading.price_board(symbols)`: Bảng giá realtime với thông tin foreign, ceiling/floor
   ```python
-  xnoapi.vn.data.Trading.price_board(["VCB","ACB","TCB"])
+  from xnoapi.vn.data.stocks import Trading
+  Trading.price_board(["VCB","ACB","TCB"])
   ```
 
 ### 📈 Phân tích & đánh giá hiệu suất
@@ -380,7 +401,7 @@ Lớp backtesting đa năng với các tính năng mới:
 ### 1. Phân tích dữ liệu định lượng với API v2
 
 ```python
-from xnoapi.vn.data.quant_data import *
+from xnoapi.vn.data import *
 import datetime as dt
 
 # Kiểm tra kết nối
@@ -475,7 +496,8 @@ def gen_position_rsi(df, period=14, oversold=30, overbought=70):
 
 # Lấy dữ liệu và tạo tín hiệu
 print("📥 Đang tải dữ liệu VN30F1M...")
-df = derivatives.get_hist("VN30F1M", "5m")  # 5 phút cho phân tích chi tiết
+from xnoapi.vn.data import get_derivatives_hist
+df = get_derivatives_hist("VN30F1M", "5m")  # 5 phút cho phân tích chi tiết
 df_pos = gen_position_rsi(df)
 
 # Áp dụng Take Profit/Stop Loss
@@ -536,8 +558,7 @@ Profit Factor        0.644           0.660           2.5           %
 ### 3. Phân tích quỹ mở và thị trường quốc tế
 
 ```python
-from xnoapi.vn.data.fund import Fund
-from xnoapi.vn.data.quote_global import Global
+from xnoapi.vn.data.stocks import Fund, Global
 import datetime as dt
 
 # Phân tích quỹ mở
@@ -616,8 +637,7 @@ USD/VND: 2.19%
 ### 4. Phân tích báo cáo tài chính và thông tin doanh nghiệp
 
 ```python
-from xnoapi.vn.data.company import Company
-from xnoapi.vn.data.finance import Finance
+from xnoapi.vn.data.stocks import Company, Finance
 
 # Phân tích VIC - Vingroup
 symbol = "VIC"
@@ -677,6 +697,157 @@ Các tỷ số tài chính chính:
 roe    0.095
 roa    0.016
 Name: 0, dtype: float64
+```
+
+### 5. Ping + Danh sách chỉ số + Snapshot VNINDEX
+
+```python
+from xnoapi.vn.data import (
+    Company, Finance, Fund, Listing, Quote, Global, MSN,
+    list_liquid_asset,
+    get_indices, get_market_index_snapshot,
+    get_stock_foreign_trading, get_stock_matches, get_stock_info, get_stock_top_price,
+    Trading,
+    get_derivatives_hist,
+)
+
+print("Ping:", 'OK' if Trading and True else 'Loaded')
+print("Indices:")
+display(get_indices().head(1))
+
+print("VNINDEX snapshot:")
+display(get_market_index_snapshot('VNINDEX').head(1))
+```
+
+```output
+Ping: OK
+Indices:
+          symbol name
+0            HNX  HNX
+
+VNINDEX snapshot:
+                   time   symbol     name       prior        value  total_vol  total_val  advance  decline  nochange  ceil  floor    change  change_pct
+0  2025-09-15T15:05:05Z  VNINDEX  VNINDEX  1667.26001  1684.900024  1122425856  3.425463e+12      222       74        58     0      0  17.639999        1.06
+```
+
+### 6. Thông tin cổ phiếu HPG (info, matches, top price, foreign)
+
+```python
+symbol = 'HPG'
+print("Stock info HPG:")
+display(get_stock_info(symbol).head(1))
+
+print("Stock matches HPG:")
+display(get_stock_matches(symbol).head(1))
+
+print("Stock top price HPG:")
+display(get_stock_top_price(symbol).head(1))
+
+print("Foreign trading:")
+display(get_stock_foreign_trading(symbol).head(1))
+```
+
+```output
+Stock info HPG:
+  symbol                  time   open   high   low  close     avg  ceil  floor  prior
+0    HPG  2025-09-15T15:33:13Z  30.25  30.85  30.1  30.35  30.451  32.1   27.9     30
+
+Stock matches HPG:
+                   time symbol  price  volume side
+0  2025-09-15T14:45:04Z    HPG  30.35      50    S
+
+Stock top price HPG:
+  symbol source                  time    bp    bq    ap    aq  total_bid  total_ask
+0    HPG         2025-09-15T14:45:04Z  None  None  None  None          0          0
+
+Foreign trading:
+                   time symbol  total_room  current_room  buy_vol  sell_vol       buy_val      sell_val
+0  2025-09-15T15:33:13Z    HPG   376098000     229122000   356690    942100  108758000000  286886000000
+```
+
+### 7. Company/Finance/Fund/Listing (ví dụ với HPG)
+
+```python
+comp = Company('HPG')
+print('Company overview:')
+display(comp.overview().head(1))
+
+print('Company profile:')
+display(comp.profile().head(1))
+
+fin = Finance('HPG')
+print('Income statement (year):')
+display(fin.income_statement(period='year').head(1))
+
+f = Fund()
+print('Funds listing (head):')
+display(f.listing().head(1))
+
+lst = Listing()
+print('Listing symbols_by_exchange:')
+print(lst.symbols_by_exchange())
+```
+
+```output
+Company overview:
+  exchange shortName  industryID industryIDv2 industryIdLevel2 industryIdLevel4           industry       industryEn establishedYear  noEmployees  noShareholders  foreignPercent                    website  stockRating  deltaInWeek  deltaInMonth  deltaInYear  outstandingShare  issueShare companyType ticker
+0     HOSE    Hòa Phát         159         1757             1700             1757  Tài nguyên Cơ bản  Basic Resources            2001        32780          165914           0.191  http://www.hoaphat.com.vn          3.1        0.041         0.022         0.09            7675.5      7675.5         CT    HPG
+
+Company profile:
+    id                       companyName ticker                                       companyProfile                                        historyDev                                      companyPromise                                        businessRisk                                     keyDevelopments                                  businessStrategies
+0  None  Công ty Cổ phần Tập đoàn Hòa Phát   None  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...  <div style="FONT-FAMILY: Arial; FONT-SIZE: 10p...
+
+Income statement (year):
+  ticker  quarter  year  revenue  yearRevenueGrowth quarterRevenueGrowth  costOfGoodSold  grossProfit  operationExpense  operationProfit  yearOperationProfitGrowth  quarterOperationProfitGrowth  interestExpense  preTaxProfit  postTaxProfit  shareHolderIncome  yearShareHolderIncomeGrowth quarterShareHolderIncomeGrowth investProfit serviceProfit otherProfit provisionExpense operationIncome  ebitda
+0    HPG        5  2024   138855              0.167                 None         -120358        18498             -3883            14615                      0.511                         None            -2287         13694          12020              12021                         0.759                           None        None         None        None             None            None   21530
+
+Funds listing (head):
+   id                                      name shortName    code subCode  tradeCode     sipCode    price       nav  lastYearNav buyMin buyMax buyMinValue buyMaxValue  sellMin sellMinValue  transferSellMin  isOnlySellMinNotSellAll  holdingMin instock  holdingVolume issueVolume issueValue  firstIssueAt      approveAt     endIssueAt maturityAt                                            website                                         websiteURL customField customValue  expectedReturn  managementFee  performanceFee closedOrderBookAt  closedOrderBookShiftDay closedBankNote productTradingSession  completeTransactionDuration                                        description  balance  feeBalance     vsdFeeId  avgAnnualReturn  isTransferred       createAt       updateAt productAssetAllocationList productAssetAllocationModelList productAssetAllocationModel1 productAssetAllocationModel2          type         status riskLevel moneyTransferSyntax productBond productCD productGold productFeeList productFeeSipList productFeeListTemp productFeeSipListTemp productFeeDiscountList productTransactionDateList productTransactionDateModelList productSupervisoryBankAccount productSupervisoryBankAccountList productTopHoldingList productTopHoldingBondList productAssetHoldingList productIndustriesHoldingList productDocuments  isDelete  isProductIpo contentHome fundReport hsbcCode productProgramList  owner.id                               owner.encodeURL       owner.code                                        owner.name  owner.userId   owner.userCode                 owner.email             owner.email2 owner.shortName                                        owner.address1  owner.phone  owner.phonePostal                 owner.website                                   owner.templateContract owner.hsbcCode  owner.securityDepositoryCenter.id owner.securityDepositoryCenter.code owner.securityDepositoryCenter.name                                      owner.avatarUrl  owner.isEnableEsign  owner.isSignBeforeBuy  owner.isRequiredFatcaInfo owner.withdrawLimitSession owner.withdrawLimitDaily owner.buySellLimitDaily  fundType.id fundType.name  dataFundAssetType.id dataFundAssetType.name dataFundAssetType.code  productFund.id  productFund.ipoStartTime  productFund.ipoEndTime  productFund.issueAt productFund.surveyIpoTemplate  productFund.isBuyByReward productFund.updateAssetHoldingTime productFund.ipoStatusCode  productNavChange.navToPrevious  productNavChange.navToLastYear  productNavChange.navToEstablish  productNavChange.navTo1Months  productNavChange.navTo3Months  productNavChange.navTo6Months  productNavChange.navTo12Months  productNavChange.navTo24Months  productNavChange.navTo36Months  productNavChange.navTo60Months  productNavChange.annualizedReturn36Months  productNavChange.navToBeginning  productNavChange.updateAt  extra.lastNAVDate  extra.lastNAV  extra.currentNAV
+0  28  QUỸ ĐẦU TƯ CHỨNG KHOÁN NĂNG ĐỘNG DC      DCDS  VFMVF1    None  VFMVF1N001  VFMVF1S006  10000.0  108248.43     81619.28   None   None        None         None     10.0         None             10.0                    False          10    None     3455975.83       None       None  1.084986e+12  1596772793489  1902589200000      None  https://vfm.com.vn/quy-dau-tu-chung-khoan-viet...  https://vfm.com.vn/quy-dau-tu-chung-khoan-viet...                      0.0           1.95             NaN              None                      None           None                  None                            2  DCDS là quỹ cổ phiếu có danh mục gồm cổ phiếu ...      0.0         0.0  VFMVF1N001            36.0           True  1596771759776  1737444441836                        None                           None                         None                             None                   TRADING_FUND  PRODUCT_ACTIVE      None               None       None     None       None          None              None                 None                        None                         None                             None                              None                                   None              None                          None                               None                         None                  None                   None                  None                 None               False          False       None      None
+
+Listing symbols_by_exchange:
+{'HOSE': ['HPG', 'VIC', 'VNM'], 'HNX': [], 'UPCOM': []}
+```
+
+### 8. Global quotes (MSN/Yahoo)
+
+```python
+g = Global()
+print('FX EURUSD:')
+df_fx = g.fx('EURUSD').quote.history('2024-01-01', '2024-03-01', '1h')
+print(df_fx.head())
+```
+
+```output
+FX EURUSD:
+Empty DataFrame
+Columns: [time, open, high, low, close, volume]
+Index: []
+```
+
+### 9. Demo backtest MA(20/50) đơn giản (VIC, timeframe giờ)
+
+```python
+from xnoapi.vn.metrics.backtest import Backtest_Stock
+from xnoapi.vn.data import get_stock_hist
+import pandas as pd
+
+df = get_stock_hist('VIC', resolution='h')
+df = df[['Date', 'time', 'Close']].dropna().copy()
+
+close = pd.to_numeric(df['Close'], errors='coerce')
+ma20  = close.rolling(20, min_periods=20).mean()
+ma50  = close.rolling(50, min_periods=50).mean()
+signal = (ma20 > ma50).astype(int).shift(1).fillna(0)
+
+df['position'] = signal * 100
+bt_input = df[['Date', 'time', 'Close', 'position']]
+bt = Backtest_Stock(bt_input, pnl_type='after_fees')
+bt.plot_PNL("VIC – MA(20/50) long-only")  # hiển thị biểu đồ PnL
+```
+
+```output
+(Biểu đồ PnL hiển thị trong notebook)
 ```
 
 ## 🆕 Tính năng mới
