@@ -9,10 +9,12 @@
 project = "xnoapi"
 copyright = "2025, xnoproject"
 author = "xnoproject"
-release = "0.1.0"
+release = "0.1.21"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+
+language = "vi"
 
 extensions = [
     "sphinx.ext.autodoc",
@@ -47,20 +49,3 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath(".."))
-
-
-# -- Options for LaTeX/PDF output --------------------------------------------
-# https://www.sphinx-doc.org/en/master/latex.html
-
-# Dùng xelatex để hỗ trợ Unicode (tiếng Việt)
-latex_engine = "xelatex"
-
-latex_elements = {
-    "babel": r"\usepackage[vietnamese]{babel}",  # ép dùng babel
-    "preamble": r"""
-\\usepackage{fontspec}
-\\setmainfont{Times New Roman}
-\\setsansfont{Arial}
-\\setmonofont{Courier New}
-""",
-}
