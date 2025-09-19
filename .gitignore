@@ -162,3 +162,5 @@ cython_debug/
 # *Db.*
 # *.db
 STORAGE
+
+xnoapi.egg-info

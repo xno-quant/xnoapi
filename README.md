@@ -82,8 +82,6 @@ client(apikey="your_api_key")
 ## 📚 Tài liệu hướng dẫn
 
 📖 **Tài liệu trực tuyến**: https://xnoapi.readthedocs.io  
-📄 **Phiên bản PDF**: Tải xuống  
-🎯 **Hướng dẫn chi tiết**: [xno.vn/docs](https://xno.vn/docs)  
 💬 **Hỗ trợ cộng đồng**: [xnoquant.vn](https://xnoquant.vn)
 
 ## 🎯 Ví dụ sử dụng cơ bản
