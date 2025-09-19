@@ -58,15 +58,15 @@ latex_engine = "xelatex"
 latex_elements = {
     "babel": r"\usepackage[vietnamese]{babel}",  # giữ nguyên babel
     "preamble": r"""
-\usepackage{fontspec}
+\\usepackage{fontspec}
 
 % Font chính
-\setmainfont{Times New Roman}
-\setsansfont{Arial}
-\setmonofont{Courier New}
+\\setmainfont{Times New Roman}
+\\setsansfont{Arial}
+\\setmonofont{Courier New}
 
 % Font emoji (Windows: Segoe UI Emoji, Linux: Noto Color Emoji, macOS: Apple Color Emoji)
-\newfontfamily\emoji{Segoe UI Emoji}
-\newcommand{\emoj}[1]{{\emoji #1}}
+\\newfontfamily\\emoji{Segoe UI Emoji}
+\\newcommand{\\emoj}[1]{{\\emoji #1}}
 """,
 }
