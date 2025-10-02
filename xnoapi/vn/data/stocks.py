@@ -326,7 +326,7 @@ def _extract_last_epoch(df_seg: pd.DataFrame) -> Optional[int]:
     """Lấy epoch giây cuối cùng của đoạn df_seg (sau normalize)."""
     if df_seg.empty:
         return None
-    ns = pd.to_datetime(df_seg["Date"]).view("int64").max()
+    ns = pd.to_datetime(df_seg["Date"]).astype("int64").max()
     return int(ns // 1_000_000_000)
 
 
