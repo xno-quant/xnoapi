@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import urllib.request
 import urllib.error
+import urllib.request
 from typing import Iterable, Optional
 
 
@@ -34,7 +34,14 @@ class Config:
         header: str = "x-api-key",
         scheme: Optional[str] = None,
         # Thêm route bảo vệ thật sự ở cuối để xác thực chắc chắn:
-        probe_paths: Iterable[str] = ("/v1/ping", "/ping", "/healthz", "/status", "/", "/list-liquid-asset"),
+        probe_paths: Iterable[str] = (
+            "/v1/ping",
+            "/ping",
+            "/healthz",
+            "/status",
+            "/",
+            "/list-liquid-asset",
+        ),
         timeout: float = 5.0,
     ):
         """
@@ -52,7 +59,13 @@ class Config:
 
         if verify:
             # Xác thực TRƯỚC khi lưu để tránh lưu key sai
-            cls._probe_api_key(candidate, header=header, scheme=scheme, probe_paths=probe_paths, timeout=timeout)
+            cls._probe_api_key(
+                candidate,
+                header=header,
+                scheme=scheme,
+                probe_paths=probe_paths,
+                timeout=timeout,
+            )
 
         # Ok -> lưu
         cls._api_key = candidate
@@ -66,7 +79,9 @@ class Config:
             APIKeyNotSetError: If the API key has not been set.
         """
         if cls._api_key is None:
-            raise APIKeyNotSetError("API key is not set. Use client(apikey=...) to set it.")
+            raise APIKeyNotSetError(
+                "API key is not set. Use client(apikey=...) to set it."
+            )
         return cls._api_key
 
     @classmethod
@@ -74,10 +89,17 @@ class Config:
         """Return the API base URL."""
         return "https://d16sdkoet71cxx.cloudfront.net"
 
+    @classmethod
+    def get_link_data(cls) -> str:
+        """Return the API base URL."""
+        return "https://api-v2.xno.vn/quant-data/v1/stocks"
+
     # ───────────────────────── Internals ─────────────────────────
 
     @classmethod
-    def _build_headers_for_key(cls, key: str, *, header: str = "x-api-key", scheme: Optional[str] = None) -> dict:
+    def _build_headers_for_key(
+        cls, key: str, *, header: str = "x-api-key", scheme: Optional[str] = None
+    ) -> dict:
         """
         Build headers using a PROVIDED key (không phụ thuộc vào get_api_key()).
         Giúp probe trước khi lưu key.
@@ -104,7 +126,7 @@ class Config:
         - 404/405/...: thử path kế tiếp
         - Lỗi mạng: raise ConnectionError
         """
-        base = cls.get_link().rstrip("/")
+        base = cls.get_link_data().rstrip("/")
         headers = cls._build_headers_for_key(key, header=header, scheme=scheme)
 
         for path in probe_paths:
@@ -117,11 +139,15 @@ class Config:
                         return True
             except urllib.error.HTTPError as e:
                 if e.code in (401, 403):
-                    raise InvalidAPIKeyError(f"Invalid API key (HTTP {e.code}) for {url}") from e
+                    raise InvalidAPIKeyError(
+                        f"Invalid API key (HTTP {e.code}) for {url}"
+                    ) from e
                 # 404/405/...: thử path tiếp theo
                 continue
             except urllib.error.URLError as e:
-                raise ConnectionError(f"Failed to validate API key against {url}: {e}") from e
+                raise ConnectionError(
+                    f"Failed to validate API key against {url}: {e}"
+                ) from e
 
         # Không thấy 401/403 -> chấp nhận tạm (endpoint health có thể không tồn tại)
         return True
@@ -138,7 +164,9 @@ class Config:
         Giữ lại bản validate dựa trên key đã lưu (backward-compatible).
         """
         key = cls.get_api_key()  # may raise APIKeyNotSetError
-        return cls._probe_api_key(key, header=header, scheme=scheme, probe_paths=probe_paths, timeout=timeout)
+        return cls._probe_api_key(
+            key, header=header, scheme=scheme, probe_paths=probe_paths, timeout=timeout
+        )
 
 
 def client(
@@ -147,7 +175,14 @@ def client(
     verify: bool = True,  # mặc định verify NGAY khi set
     header: str = "x-api-key",
     scheme: Optional[str] = None,
-    probe_paths: Iterable[str] = ("/v1/ping", "/ping", "/healthz", "/status", "/", "/list-liquid-asset"),
+    probe_paths: Iterable[str] = (
+        "/v1/ping",
+        "/ping",
+        "/healthz",
+        "/status",
+        "/",
+        "/list-liquid-asset",
+    ),
     timeout: float = 5.0,
 ):
     """
